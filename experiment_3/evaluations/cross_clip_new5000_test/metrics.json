@@ -1,0 +1,89 @@
+{
+  "video_any_roc_auc": 0.998784,
+  "video_any_ap": 0.9995970196671902,
+  "accuracy": 0.974,
+  "precision": 0.9972527472527473,
+  "recall": 0.968,
+  "f1": 0.9824086603518268,
+  "balanced_accuracy": 0.98,
+  "false_positive_rate": 0.008,
+  "confusion_matrix_0_1": [
+    [
+      124,
+      1
+    ],
+    [
+      12,
+      363
+    ]
+  ],
+  "videos": 500,
+  "positives": 375,
+  "negatives": 125,
+  "positive_prevalence": 0.75,
+  "threshold_logit": -1.4878020286560059,
+  "threshold_probability": 0.18425186010616773,
+  "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+  "target": "modify_audio OR modify_video",
+  "by_category": {
+    "real": {
+      "videos": 125,
+      "false_positive_rate": 0.008
+    },
+    "audio_only": {
+      "videos": 125,
+      "recall": 1.0
+    },
+    "visual_only": {
+      "videos": 125,
+      "recall": 0.904
+    },
+    "both": {
+      "videos": 125,
+      "recall": 1.0
+    }
+  },
+  "format": "experiment_3_v1",
+  "split": "test",
+  "mode": "cross",
+  "settings": {
+    "mode": "cross",
+    "width": 256,
+    "heads": 4,
+    "layers": 1,
+    "ff_multiplier": 2,
+    "head_width": 128,
+    "dropout": 0.2,
+    "time_encoding": true,
+    "batch_size": 8,
+    "epochs": 50,
+    "patience": 8,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "balance": "class",
+    "attention_backend": "math"
+  },
+  "parameters": 1294593,
+  "checkpoint_sha256": "145c11dd32f8032fe01e0da21ff0b65db4ad0e304eeeb88ab42e5a807475b120",
+  "checkpoint_epoch": 20,
+  "threshold_source": "checkpoint_DEV_only",
+  "evaluated_split_id": "17f2b9c62d33583388ce389d43bccad5ff48ab7fa364ffc67df65fe459ffc713",
+  "train_dev_split_ids": {
+    "train": "4e192954f235b673157daa560b307cf16dea04b37b3628552fe8ec78b6fe5ec4",
+    "dev": "6ca3c589ccd4f7b3dc6e5d81317b65f3d16f9641c342108ae0bb47e0a832fc0c"
+  },
+  "e2b_evaluated_split_id": "35aedfeed687e074f5d38e6587c6203f63815d2451608a5c9e68718e6ee12324",
+  "e2b_train_dev_split_ids": {
+    "train": "a65e1b5c54b70def19d9cc38798dadca7e1e166f078700007f51e66f1a26fc00",
+    "dev": "017bdc14bf259ee658d17cec19ef662fd17a1f6f93c21c125259fe2b94607dc2"
+  },
+  "encoder_ids": {
+    "visual": "85cf234e124c0742a66e24c4fa83c53ac3975a9f0618855a2bf4a05752e1df76",
+    "audio": "314453656435b250a368d1adad0b7a7fb30dce5ef72576abe6aa599c1d406b90"
+  },
+  "normalization": "b5dc6fd9d149cd849cc37ececb5c1a9f85139e67dca49d21569817c69da1b0ae",
+  "temporal_policy": "all_original_observations",
+  "test_only": false,
+  "seconds": 2.5954106750014034
+}

@@ -1,0 +1,8 @@
+# Use your already-working ummaformer environment first. Do NOT pip-upgrade it blindly.
+# Torch/torchvision must be mutually compatible and are installed separately.
+numpy>=1.24,<3
+Pillow>=9
+scikit-learn>=1.2
+tqdm>=4.64
+# Existing OpenCV with Farneback is sufficient for the primary experiment.
+# Optional TV-L1 requires ONE opencv-contrib build, not multiple cv2 wheels.

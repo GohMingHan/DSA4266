@@ -1,0 +1,21 @@
+{
+  "kind": "TSN_R50_ActivityNet_clip_flow_150e",
+  "checkpoint_name": "tsn_r50_320p_1x1x8_150e_activitynet_clip_flow_20200804-8622cf38.pth",
+  "checkpoint_url": "https://download.openmmlab.com/mmaction/recognition/tsn/tsn_r50_320p_1x1x8_150e_activitynet_clip_flow/tsn_r50_320p_1x1x8_150e_activitynet_clip_flow_20200804-8622cf38.pth",
+  "checkpoint_sha256": "8622cf380464f42fa20ca77a566db07c2643c6593f616d70af8cf311a01bbbda",
+  "input_channels": 10,
+  "output_dim": 2048,
+  "backend": "strict_mmaction_backbone_to_torchvision_resnet50",
+  "stride_style": "pytorch",
+  "feature_layer": "global_average_pool_after_layer4",
+  "action_head_excluded_keys": [
+    "cls_head.fc_cls.weight",
+    "cls_head.fc_cls.bias"
+  ],
+  "trained_here": false,
+  "torch": "2.7.1+cu128",
+  "torchvision": "0.22.1+cu128",
+  "precision": "float32_no_tf32",
+  "numerical_mmaction_parity_verified_here": false,
+  "bytes": 96028116
+}

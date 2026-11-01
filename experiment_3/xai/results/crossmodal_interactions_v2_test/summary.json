@@ -1,0 +1,343 @@
+{
+  "description": "Logit difference-in-differences, same-family 2x2 counterfactual contrasts",
+  "formula": "f(V1,A1)-f(V1,A0)-f(V0,A1)+f(V0,A0)",
+  "baseline_visual": "real",
+  "baseline_audio": "real",
+  "n_families": 125,
+  "bootstrap_resamples": 5000,
+  "bootstrap_unit": "source_family",
+  "seed": 42,
+  "interpretation_limit": "Non-additivity is not proof of audiovisual synchronization or causal interaction.",
+  "summary": [
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "audio_only",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -4.0787606835365295,
+      "median_absolute": 4.0787606835365295,
+      "mean_signed": -4.211183978796005,
+      "positive_fraction": 0.144,
+      "negative_fraction": 0.856,
+      "median_signed_ci95": [
+        -4.807337760925293,
+        -3.591899111866951
+      ],
+      "median_absolute_ci95": [
+        3.6361565738916397,
+        4.807337760925293
+      ]
+    },
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "audio_only",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -9.368375778198242,
+      "median_absolute": 9.368375778198242,
+      "mean_signed": -8.47737366950512,
+      "positive_fraction": 0.04,
+      "negative_fraction": 0.96,
+      "median_signed_ci95": [
+        -10.294979572296143,
+        -7.981389999389648
+      ],
+      "median_absolute_ci95": [
+        8.082762077450752,
+        10.294979572296143
+      ]
+    },
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "audio_only",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -5.000389099121094,
+      "median_absolute_difference": 4.977378845214844,
+      "median_signed_difference_ci95": [
+        -5.943977355957031,
+        -3.0862679481506348
+      ],
+      "median_absolute_difference_ci95": [
+        2.834813177585602,
+        5.859382152557373
+      ],
+      "fraction_cross_larger_absolute": 0.728
+    },
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "both",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -4.150375127792358,
+      "median_absolute": 4.150375127792358,
+      "mean_signed": -4.261646584630013,
+      "positive_fraction": 0.136,
+      "negative_fraction": 0.864,
+      "median_signed_ci95": [
+        -5.040987014770508,
+        -3.719271183013916
+      ],
+      "median_absolute_ci95": [
+        3.735292926430702,
+        4.9674973487854
+      ]
+    },
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "both",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -9.372273445129395,
+      "median_absolute": 9.372273445129395,
+      "mean_signed": -8.56243142592907,
+      "positive_fraction": 0.032,
+      "negative_fraction": 0.968,
+      "median_signed_ci95": [
+        -10.500082015991211,
+        -8.053622126579285
+      ],
+      "median_absolute_ci95": [
+        8.053622126579285,
+        10.500082015991211
+      ]
+    },
+    {
+      "visual_contrast": "visual_only",
+      "audio_contrast": "both",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -4.847944021224976,
+      "median_absolute_difference": 4.839878082275391,
+      "median_signed_difference_ci95": [
+        -5.998783648014069,
+        -3.21578311920166
+      ],
+      "median_absolute_difference_ci95": [
+        3.1316914558410645,
+        5.959532737731934
+      ],
+      "fraction_cross_larger_absolute": 0.728
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "audio_only",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -0.41510510444641113,
+      "median_absolute": 1.6005277633666992,
+      "mean_signed": -0.7583356857299804,
+      "positive_fraction": 0.448,
+      "negative_fraction": 0.552,
+      "median_signed_ci95": [
+        -0.8238973766565323,
+        0.29477357864379883
+      ],
+      "median_absolute_ci95": [
+        1.4224443435668945,
+        2.032663106918335
+      ]
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "audio_only",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -3.9405269622802734,
+      "median_absolute": 3.9405269622802734,
+      "mean_signed": -4.22171107339859,
+      "positive_fraction": 0.096,
+      "negative_fraction": 0.904,
+      "median_signed_ci95": [
+        -4.550215244293213,
+        -2.9391140937805176
+      ],
+      "median_absolute_ci95": [
+        3.081188678741455,
+        4.5527379512786865
+      ]
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "audio_only",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -2.978262424468994,
+      "median_absolute_difference": 1.399810791015625,
+      "median_signed_difference_ci95": [
+        -4.283499777317047,
+        -2.189877510070801
+      ],
+      "median_absolute_difference_ci95": [
+        0.7909083366394043,
+        2.4263099431991577
+      ],
+      "fraction_cross_larger_absolute": 0.68
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "both",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -0.23501604795455933,
+      "median_absolute": 1.7583460807800293,
+      "mean_signed": -0.8075232524871826,
+      "positive_fraction": 0.44,
+      "negative_fraction": 0.56,
+      "median_signed_ci95": [
+        -1.0236692428588867,
+        0.24772310256958008
+      ],
+      "median_absolute_ci95": [
+        1.4349391460418701,
+        2.0879013538360596
+      ]
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "both",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -3.8861641883850098,
+      "median_absolute": 3.9892377853393555,
+      "mean_signed": -4.245828679323196,
+      "positive_fraction": 0.088,
+      "negative_fraction": 0.912,
+      "median_signed_ci95": [
+        -4.537975072860718,
+        -3.0825610160827637
+      ],
+      "median_absolute_ci95": [
+        3.25826096534729,
+        4.537975072860718
+      ]
+    },
+    {
+      "visual_contrast": "audio_only",
+      "audio_contrast": "both",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -3.1133522987365723,
+      "median_absolute_difference": 1.5361847877502441,
+      "median_signed_difference_ci95": [
+        -4.13388729095459,
+        -2.2206897735595703
+      ],
+      "median_absolute_difference_ci95": [
+        0.8262567520141602,
+        2.425251916050911
+      ],
+      "fraction_cross_larger_absolute": 0.68
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "audio_only",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -6.230480670928955,
+      "median_absolute": 6.230480670928955,
+      "mean_signed": -5.79900566148758,
+      "positive_fraction": 0.056,
+      "negative_fraction": 0.944,
+      "median_signed_ci95": [
+        -6.706628799438477,
+        -5.103111267089844
+      ],
+      "median_absolute_ci95": [
+        5.103111267089844,
+        6.706628799438477
+      ]
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "audio_only",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -10.185140609741211,
+      "median_absolute": 10.185140609741211,
+      "mean_signed": -9.096015384495258,
+      "positive_fraction": 0.024,
+      "negative_fraction": 0.976,
+      "median_signed_ci95": [
+        -11.284802913665771,
+        -9.00709342956543
+      ],
+      "median_absolute_ci95": [
+        9.00709342956543,
+        11.284802913665771
+      ]
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "audio_only",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -3.8260889053344727,
+      "median_absolute_difference": 3.8260889053344727,
+      "median_signed_difference_ci95": [
+        -4.876614570617676,
+        -2.4867692589759827
+      ],
+      "median_absolute_difference_ci95": [
+        2.390096664428711,
+        4.876614570617676
+      ],
+      "fraction_cross_larger_absolute": 0.704
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "both",
+      "model": "concat",
+      "n_families": 125,
+      "median_signed": -6.230480670928955,
+      "median_absolute": 6.230480670928955,
+      "mean_signed": -5.895832842707634,
+      "positive_fraction": 0.064,
+      "negative_fraction": 0.936,
+      "median_signed_ci95": [
+        -6.8171844482421875,
+        -5.557537660002708
+      ],
+      "median_absolute_ci95": [
+        5.230731964111328,
+        6.8171844482421875
+      ]
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "both",
+      "model": "cross",
+      "n_families": 125,
+      "median_signed": -10.185140609741211,
+      "median_absolute": 10.185140609741211,
+      "mean_signed": -9.188848119556903,
+      "positive_fraction": 0.016,
+      "negative_fraction": 0.984,
+      "median_signed_ci95": [
+        -11.331575393676758,
+        -9.022799015045166
+      ],
+      "median_absolute_ci95": [
+        9.022799015045166,
+        11.331575393676758
+      ]
+    },
+    {
+      "visual_contrast": "both",
+      "audio_contrast": "both",
+      "model": "cross_minus_concat_paired",
+      "n_families": 125,
+      "median_signed_difference": -3.723609447479248,
+      "median_absolute_difference": 3.5699243545532227,
+      "median_signed_difference_ci95": [
+        -4.8921403884887695,
+        -2.482575476169586
+      ],
+      "median_absolute_difference_ci95": [
+        2.275419235229492,
+        4.8921403884887695
+      ],
+      "fraction_cross_larger_absolute": 0.72
+    }
+  ]
+}

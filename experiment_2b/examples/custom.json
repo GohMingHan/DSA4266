@@ -1,0 +1,8 @@
+{
+  "kind": "custom",
+  "checkpoint": "best.pt",
+  "adapter_file": "model_adapter.py",
+  "time_origin": "first_decoded_video_frame",
+  "python": null,
+  "note": "Implement model_adapter.py against the actual notebook architecture and training preprocessing. No automatic unsafe loading or guessing."
+}

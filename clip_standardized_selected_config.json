@@ -1,0 +1,15 @@
+  {
+  "model": "CLIP ViT-B/32",
+  "experiment": "lower_encoder_lr",
+  "checkpoint": "clip_lower_lr_best.pt",
+  "best_epoch": 7,
+  "sampling": "shared_10fps_pts",
+  "aggregation": "top5_mean",
+  "topk_fraction": 0.05,
+  "threshold_selection": "maximize_dev_video_f1",
+  "tie_break": "closest_to_0.5_then_lower",
+  "video_threshold": 0.35,
+  "reference_threshold": 0.5,
+  "dev_video_roc_auc": 0.8946,
+  "dev_video_pr_auc": 0.8853
+}

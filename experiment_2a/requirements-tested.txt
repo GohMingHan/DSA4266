@@ -1,0 +1,11 @@
+# Validation environment only: Linux/CPU, Python 3.13.5.
+# For CUDA use an appropriate mutually compatible torch/torchvision pair.
+numpy==2.3.5
+librosa==0.11.0
+soundfile==0.13.1
+scipy==1.17.0
+scikit-learn==1.8.0
+tqdm==4.67.3
+pytest==9.0.2
+torch==2.10.0+cpu
+torchvision==0.25.0+cpu

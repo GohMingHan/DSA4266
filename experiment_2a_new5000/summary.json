@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "dev_videos": 500,
+    "dev_audio_fake_videos": 250,
+    "dev_windows_label_0": 2310,
+    "dev_windows_label_1": 1260,
+    "test_videos": 500,
+    "test_audio_fake_videos": 250,
+    "test_windows_label_0": 2021,
+    "test_windows_label_1": 1254,
+    "train_videos": 4000,
+    "train_audio_fake_videos": 2000,
+    "train_windows_label_0": 18072,
+    "train_windows_label_1": 9971
+  },
+  "selected_this_run": 500,
+  "resumed_this_run": 0,
+  "failures_this_run": 0,
+  "feature_gib": 5.871800445020199,
+  "wav_gib": 1.009417399764061,
+  "metadata_videos": 5000,
+  "config_id": "fcbe75b00b095859b23e6ef5ccd82ae3da4a98061bd8cffca1cd4c28c5b88a72"
+}

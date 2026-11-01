@@ -1,0 +1,11 @@
+{
+  "kind": "experiment_2a",
+  "checkpoint": "best.pt",
+  "project_dir": "/home/evan/dsa4266/experiment_2a",
+  "input_root": "/mnt/c/Users/wuche/Downloads/archive",
+  "aasist_dir": null,
+  "python": null,
+  "batch_size": 16,
+  "time_origin": "first_decoded_video_frame",
+  "selection_basis": "development_set"
+}

@@ -1,0 +1,89 @@
+{
+  "video_any_roc_auc": 0.9893973333333334,
+  "video_any_ap": 0.9965342098862224,
+  "accuracy": 0.958,
+  "precision": 0.9809782608695652,
+  "recall": 0.9626666666666667,
+  "f1": 0.971736204576043,
+  "balanced_accuracy": 0.9533333333333334,
+  "false_positive_rate": 0.056,
+  "confusion_matrix_0_1": [
+    [
+      118,
+      7
+    ],
+    [
+      14,
+      361
+    ]
+  ],
+  "videos": 500,
+  "positives": 375,
+  "negatives": 125,
+  "positive_prevalence": 0.75,
+  "threshold_logit": -0.6729016900062561,
+  "threshold_probability": 0.33784740866105006,
+  "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+  "target": "modify_audio OR modify_video",
+  "by_category": {
+    "real": {
+      "videos": 125,
+      "false_positive_rate": 0.056
+    },
+    "audio_only": {
+      "videos": 125,
+      "recall": 0.992
+    },
+    "visual_only": {
+      "videos": 125,
+      "recall": 0.896
+    },
+    "both": {
+      "videos": 125,
+      "recall": 1.0
+    }
+  },
+  "format": "experiment_3_v1",
+  "split": "dev",
+  "mode": "self",
+  "settings": {
+    "mode": "self",
+    "width": 256,
+    "heads": 4,
+    "layers": 1,
+    "ff_multiplier": 2,
+    "head_width": 128,
+    "dropout": 0.2,
+    "time_encoding": true,
+    "batch_size": 8,
+    "epochs": 50,
+    "patience": 8,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "balance": "class",
+    "attention_backend": "math"
+  },
+  "parameters": 1229057,
+  "checkpoint_sha256": "23ea4bee8f94ab62e4d5dd3016a847535739e61c56740dc7255ebb77951f8d7c",
+  "checkpoint_epoch": 10,
+  "threshold_source": "checkpoint_DEV_only",
+  "evaluated_split_id": "57d5092953936a7085463551323ccacfd836c0c1abcdb55ccce161a811b1995d",
+  "train_dev_split_ids": {
+    "train": "c6a836d1ee31610a5abf67efb9deec13dc51218c2335ce098475c57fc080b1ec",
+    "dev": "57d5092953936a7085463551323ccacfd836c0c1abcdb55ccce161a811b1995d"
+  },
+  "e2b_evaluated_split_id": "8410364b204917932914e8036d732eca4689a7a36518a4841736ddb3861681ac",
+  "e2b_train_dev_split_ids": {
+    "train": "a8a691cf15aad083ee4db8bbaae96a36356c2e053e6d0dfe81ba652046a3ce77",
+    "dev": "8410364b204917932914e8036d732eca4689a7a36518a4841736ddb3861681ac"
+  },
+  "encoder_ids": {
+    "visual": "f8ec62dd5bac775bdd453feffa0a561db135a917f2042ef64eddfcbd5840ad5c",
+    "audio": "f6dcd37ec7c8f12677cb8f6258a816c55048cd3e48a751013764423c03edaac4"
+  },
+  "normalization": "ec6741136ddf3d459da8e1f3276c8093944f22885c49438dbf3f5c78fdc798a6",
+  "temporal_policy": "all_original_observations",
+  "test_only": false,
+  "seconds": 4.062112627998431
+}

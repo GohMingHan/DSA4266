@@ -1,0 +1,6 @@
+# Keep working PyTorch/CUDA installations. Install torch separately only if absent.
+numpy>=1.26,<3
+scikit-learn>=1.3,<2
+tqdm>=4.66,<5
+# Encoder-specific dependencies stay in each original encoder environment.
+# For tests only: python -m pip install pytest

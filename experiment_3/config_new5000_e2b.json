@@ -1,0 +1,14 @@
+{
+  "format": "experiment_2b_v1",
+  "cohort": "/mnt/c/Users/wuche/Downloads/LAV-DF-5000-NEW/metadata.new5000.json",
+  "expected_counts": {
+    "train": 4000,
+    "dev": 500,
+    "test": 500
+  },
+  "visual_slot": "/home/evan/dsa4266/experiment_2b/models/visual/encoder.json",
+  "audio_slot": "/home/evan/dsa4266/experiment_2b/models/audio/encoder.json",
+  "visual_embeddings": "/home/evan/dsa4266/experiment_3/work/new5000_canonical_v2/visual",
+  "audio_embeddings": "/home/evan/dsa4266/experiment_3/work/new5000_canonical_v2/audio",
+  "threads": 4
+}

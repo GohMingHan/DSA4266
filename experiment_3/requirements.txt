@@ -1,0 +1,6 @@
+# Reuse your working torch 2.7.1+cu128 environment. Do not replace CUDA/PyTorch here.
+numpy>=1.26,<3
+scikit-learn>=1.3,<2
+tqdm>=4.66,<5
+# Tests only: pytest>=7
+# Frozen encoder extraction uses each model's original dependencies/environment.

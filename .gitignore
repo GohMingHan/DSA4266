@@ -1,0 +1,107 @@
+# ============================================================
+# DSA4266 - Multimodal deepfake detection
+# Place this file at ~/dsa4266/.gitignore
+# ============================================================
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Local environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Raw media and large extracted feature arrays
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.flac
+*.npy
+*.npz
+*.bin
+
+# Model checkpoints and serialized weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Experiment-generated feature exports
+/experiment_2b_outputs/
+/experiment_2a_new5000_aasist_embeddings/
+/experiment_2a_new5000_aasist_test_embeddings/
+/experiment_2a_new5000/clips/
+/experiment_2a_new5000/errors_latest_run.jsonl
+/experiment_2b/work/
+/experiment_3/work/
+/ummaformer_opencv_flow/runs/
+/ummaformer_tsn_flow/runs/
+
+# Training runs: retain small provenance JSON files, not weights
+/experiment_2a/trained_models/
+/experiment_2b/runs/
+/experiment_3/runs/
+
+# Raw local dataset (keep preparation scripts in lavdf_new5000/)
+/lavdf_new5000/train/
+/lavdf_new5000/dev/
+/lavdf_new5000/test/
+/lavdf_new5000/videos/
+/lavdf_new5000/data/
+
+# Temporary files and logs
+*.tmp
+*.log
+*.bak
+
+# Nested repositories
+**/.git/
+
+# Upstream code copies
+ummaformer_opencv_flow/upstream/
+
+# Old experimental artifacts
+ummaformer_bayesopt_tsn_20261016_155527/
+test_eval_manifest_backups/
+
+# Generated feature directories
+ummaformer_tsn_flow/features/
+ummaformer_opencv_flow/features/
+
+# Large preprocessing/audit outputs
+lavdf_new5000/frame_audit/results_all_audio_dev/
+lavdf_new5000/frame_audit/alignment_results/
+
+# Large generated manifests
+experiment_2a_new5000/manifest.jsonl
+
+# Generated UMMAFormer proposals
+ummaformer_opencv_flow/**/proposals.jsonl
+ummaformer_tsn_flow/**/proposals.jsonl
+
+# Local source-code backups
+*.bak
+*.bak.*

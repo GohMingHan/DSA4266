@@ -1,0 +1,38 @@
+{
+  "format": "experiment_3_v1",
+  "target": "modify_audio OR modify_video",
+  "dims": {
+    "visual": 512,
+    "audio": 160
+  },
+  "encoder_ids": {
+    "visual": "dc0e7b441834066fa0212acc6ea27a96f73a214b11fb3d6b12028ed9d81c2309",
+    "audio": "314453656435b250a368d1adad0b7a7fb30dce5ef72576abe6aa599c1d406b90"
+  },
+  "normalization": {
+    "method": "natural_TRAIN_video_mean_statistics; shared with E2B mean baseline",
+    "npz_sha256": "5684a8581961b84333ba306553776b959618a2b1e6a1f79b4f0c767fd45b015d"
+  },
+  "time_origin": "first_decoded_video_frame",
+  "temporal_policy": "all_original_observations",
+  "splits": {
+    "train": {
+      "signature": "954dabd0a448fa64a11709a5e14174157cd8004018218bf4d4e51f3df28e5fae",
+      "rows_sha256": "7cd8bd0b0683e7785992c44f9a8a36014eb8cd81fd2e6a686d07ab5cc6c810ea",
+      "videos": 4000,
+      "e2b_mean_signature": "41b0ce29a31b0ac147b41499c5840ae9e11a4abdb917818973e3d71fc706c09e"
+    },
+    "dev": {
+      "signature": "378d990cc52c0219b467db46ca1afd6d7ec0a7001ec4978341a894a6668e82b7",
+      "rows_sha256": "eb1874c14cc64cf95f2a1ef3e4ee56de03ab4740aac683e45d84249baa5c7cd6",
+      "videos": 500,
+      "e2b_mean_signature": "6beb526fac1ae457b25a6a8d9a9bd547a21a16d7773f91d91b882dad84a42c4b"
+    },
+    "test": {
+      "e2b_mean_signature": "122b6dfdb6d3dffe1eff10b87f2b6f5aae983fc6358eb6249fbd7716407e4907",
+      "signature": "6eb0dec5e5456a06cbba77194f1319c1ea40f5b3a803911a5d648b7659bb1e90",
+      "rows_sha256": "acf8dc47927f49abcaae55dc80b13aeeb8f37eb4b7a7544dbce92826f27f890c",
+      "videos": 500
+    }
+  }
+}

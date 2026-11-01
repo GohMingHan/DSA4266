@@ -1,0 +1,11 @@
+{
+  "kind": "preexported",
+  "checkpoint": "clip_best.pt",
+  "index": "/home/evan/dsa4266/experiment_2b_outputs/clip_visual_features/vit_b32_lower_lr_10fps_a69a1ddcf56d_f4bf4647/index.jsonl",
+  "representation": "pre_classifier_embeddings",
+  "description": "Fine-tuned CLIP ViT-B/32 Lower-LR model; normalized 512-D image_embeds before the binary classification layer.",
+  "preprocessing_id": "clip-vit-b32-lower-lr_clip-image-processor_10fps_decoded-timestamp-v1",
+  "preprocessing_verified": true,
+  "time_origin": "first_decoded_video_frame",
+  "python": null
+}

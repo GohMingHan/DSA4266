@@ -1,0 +1,15 @@
+# Reuse the working ummaformer environment. PyTorch, torchvision, torchsort and
+# OpenCV are checked separately by setup.sh to avoid replacing a working CUDA build.
+numpy>=1.24,<2
+scipy>=1.10,<2
+scikit-learn>=1.3,<2
+PyYAML>=6,<7
+pandas>=2,<3
+h5py>=3.9,<4
+joblib>=1.3,<2
+einops>=0.7,<1
+tqdm>=4.66,<5
+tensorboard>=2.14,<3
+Pillow>=10
+ninja>=1.11
+pytest>=8,<9

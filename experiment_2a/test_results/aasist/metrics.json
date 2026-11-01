@@ -1,0 +1,14 @@
+{
+  "Model": "AASIST",
+  "ROC-AUC": 1.0,
+  "Accuracy": 0.998,
+  "Precision": 0.9960159362549801,
+  "Recall": 1.0,
+  "F1": 0.998003992015968,
+  "Threshold": 0.949567437171936,
+  "TP": 250,
+  "TN": 249,
+  "FP": 1,
+  "FN": 0,
+  "Test Videos": 500
+}

@@ -1,0 +1,14 @@
+{
+  "format": "experiment_2b_v1",
+  "cohort": "${LAVDF_METADATA}",
+  "expected_counts": {
+    "train": 4000,
+    "dev": 500,
+    "test": 500
+  },
+  "visual_slot": "models/visual/encoder.json",
+  "audio_slot": "models/audio/encoder.json",
+  "visual_embeddings": "../experiment_3/work/new5000_clip_v2_canonical_fixed/visual",
+  "audio_embeddings": "../experiment_3/work/new5000_clip_v2_canonical_fixed/audio",
+  "threads": 4
+}

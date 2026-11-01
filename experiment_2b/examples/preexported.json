@@ -1,0 +1,11 @@
+{
+  "kind": "preexported",
+  "checkpoint": "best.pt",
+  "index": "CHANGE_ME/exported_embeddings/index.jsonl",
+  "representation": "pre_classifier_embeddings",
+  "description": "CHANGE_ME: exact backbone/readout, e.g. trained YOLO classifier pre-linear pooled features",
+  "preprocessing_id": "CHANGE_ME: actual saved preprocessing version or hash",
+  "preprocessing_verified": false,
+  "time_origin": "first_decoded_video_frame",
+  "python": null
+}

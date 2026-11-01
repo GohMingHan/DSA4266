@@ -1,0 +1,89 @@
+{
+  "video_any_roc_auc": 0.9918933333333333,
+  "video_any_ap": 0.9973221922106434,
+  "accuracy": 0.95,
+  "precision": 0.9861111111111112,
+  "recall": 0.9466666666666667,
+  "f1": 0.9659863945578231,
+  "balanced_accuracy": 0.9533333333333334,
+  "false_positive_rate": 0.04,
+  "confusion_matrix_0_1": [
+    [
+      120,
+      5
+    ],
+    [
+      20,
+      355
+    ]
+  ],
+  "videos": 500,
+  "positives": 375,
+  "negatives": 125,
+  "positive_prevalence": 0.75,
+  "threshold_logit": -0.436586856842041,
+  "threshold_probability": 0.39255455277681445,
+  "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+  "target": "modify_audio OR modify_video",
+  "by_category": {
+    "real": {
+      "videos": 125,
+      "false_positive_rate": 0.04
+    },
+    "audio_only": {
+      "videos": 125,
+      "recall": 0.992
+    },
+    "visual_only": {
+      "videos": 125,
+      "recall": 0.856
+    },
+    "both": {
+      "videos": 125,
+      "recall": 0.992
+    }
+  },
+  "format": "experiment_3_v1",
+  "split": "test",
+  "mode": "concat",
+  "settings": {
+    "mode": "concat",
+    "width": 256,
+    "heads": 4,
+    "layers": 1,
+    "ff_multiplier": 2,
+    "head_width": 128,
+    "dropout": 0.2,
+    "time_encoding": true,
+    "batch_size": 8,
+    "epochs": 50,
+    "patience": 8,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "balance": "class",
+    "attention_backend": "math"
+  },
+  "parameters": 119297,
+  "checkpoint_sha256": "f51afc32b455ff9cfb370c37751a6b6abfffa67968f80b993095da85cd9f5e68",
+  "checkpoint_epoch": 6,
+  "threshold_source": "checkpoint_DEV_only",
+  "evaluated_split_id": "17f2b9c62d33583388ce389d43bccad5ff48ab7fa364ffc67df65fe459ffc713",
+  "train_dev_split_ids": {
+    "train": "4e192954f235b673157daa560b307cf16dea04b37b3628552fe8ec78b6fe5ec4",
+    "dev": "6ca3c589ccd4f7b3dc6e5d81317b65f3d16f9641c342108ae0bb47e0a832fc0c"
+  },
+  "e2b_evaluated_split_id": "35aedfeed687e074f5d38e6587c6203f63815d2451608a5c9e68718e6ee12324",
+  "e2b_train_dev_split_ids": {
+    "train": "a65e1b5c54b70def19d9cc38798dadca7e1e166f078700007f51e66f1a26fc00",
+    "dev": "017bdc14bf259ee658d17cec19ef662fd17a1f6f93c21c125259fe2b94607dc2"
+  },
+  "encoder_ids": {
+    "visual": "85cf234e124c0742a66e24c4fa83c53ac3975a9f0618855a2bf4a05752e1df76",
+    "audio": "314453656435b250a368d1adad0b7a7fb30dce5ef72576abe6aa599c1d406b90"
+  },
+  "normalization": "b5dc6fd9d149cd849cc37ececb5c1a9f85139e67dca49d21569817c69da1b0ae",
+  "temporal_policy": "all_original_observations",
+  "test_only": false,
+  "seconds": 1.3246861480001826
+}

@@ -1,0 +1,10 @@
+{
+  "format": "experiment_2b_v1",
+  "cohort": "/mnt/c/Users/wuche/Downloads/LAV-DF-5000/LAV-DF-5000/metadata.min.json",
+  "expected_counts": {"train": 4000, "dev": 500, "test": 500},
+  "visual_slot": "models/visual/encoder.json",
+  "audio_slot": "models/audio/encoder.json",
+  "visual_embeddings": "work/embeddings/visual_clip_lower_lr",
+  "audio_embeddings": "work/embeddings/audio",
+  "threads": 4
+}

@@ -1,0 +1,89 @@
+{
+  "video_any_roc_auc": 0.9890133333333333,
+  "video_any_ap": 0.9964799643597761,
+  "accuracy": 0.956,
+  "precision": 0.9889196675900277,
+  "recall": 0.952,
+  "f1": 0.970108695652174,
+  "balanced_accuracy": 0.96,
+  "false_positive_rate": 0.032,
+  "confusion_matrix_0_1": [
+    [
+      121,
+      4
+    ],
+    [
+      18,
+      357
+    ]
+  ],
+  "videos": 500,
+  "positives": 375,
+  "negatives": 125,
+  "positive_prevalence": 0.75,
+  "threshold_logit": 1.7369213104248047,
+  "threshold_probability": 0.8502955923372036,
+  "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+  "target": "modify_audio OR modify_video",
+  "by_category": {
+    "real": {
+      "videos": 125,
+      "false_positive_rate": 0.032
+    },
+    "audio_only": {
+      "videos": 125,
+      "recall": 0.96
+    },
+    "visual_only": {
+      "videos": 125,
+      "recall": 0.912
+    },
+    "both": {
+      "videos": 125,
+      "recall": 0.984
+    }
+  },
+  "format": "experiment_3_v1",
+  "split": "dev",
+  "mode": "concat",
+  "settings": {
+    "mode": "concat",
+    "width": 256,
+    "heads": 4,
+    "layers": 1,
+    "ff_multiplier": 2,
+    "head_width": 128,
+    "dropout": 0.2,
+    "time_encoding": true,
+    "batch_size": 8,
+    "epochs": 50,
+    "patience": 8,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "balance": "class",
+    "attention_backend": "math"
+  },
+  "parameters": 119297,
+  "checkpoint_sha256": "cd4d987400c2119373c42cb19f136a6dccc7d6419cdc253816816016836d6a8f",
+  "checkpoint_epoch": 7,
+  "threshold_source": "checkpoint_DEV_only",
+  "evaluated_split_id": "378d990cc52c0219b467db46ca1afd6d7ec0a7001ec4978341a894a6668e82b7",
+  "train_dev_split_ids": {
+    "train": "954dabd0a448fa64a11709a5e14174157cd8004018218bf4d4e51f3df28e5fae",
+    "dev": "378d990cc52c0219b467db46ca1afd6d7ec0a7001ec4978341a894a6668e82b7"
+  },
+  "e2b_evaluated_split_id": "6beb526fac1ae457b25a6a8d9a9bd547a21a16d7773f91d91b882dad84a42c4b",
+  "e2b_train_dev_split_ids": {
+    "train": "41b0ce29a31b0ac147b41499c5840ae9e11a4abdb917818973e3d71fc706c09e",
+    "dev": "6beb526fac1ae457b25a6a8d9a9bd547a21a16d7773f91d91b882dad84a42c4b"
+  },
+  "encoder_ids": {
+    "visual": "dc0e7b441834066fa0212acc6ea27a96f73a214b11fb3d6b12028ed9d81c2309",
+    "audio": "314453656435b250a368d1adad0b7a7fb30dce5ef72576abe6aa599c1d406b90"
+  },
+  "normalization": "5684a8581961b84333ba306553776b959618a2b1e6a1f79b4f0c767fd45b015d",
+  "temporal_policy": "all_original_observations",
+  "test_only": false,
+  "seconds": 1.376828827999816
+}

@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+work/
+runs/
+# Keep evaluation scripts and lightweight results
+# Exclude generated binary artifacts only
+evaluations/**/*.pt
+evaluations/**/*.pth
+evaluations/**/*.npz
+evaluations/**/*.npy
+evaluations/**/*.mp4
+*.pt
+*.pth
+*.npz

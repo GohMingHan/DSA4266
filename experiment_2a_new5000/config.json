@@ -1,0 +1,22 @@
+{
+  "pipeline_version": 2,
+  "audio": {
+    "sample_rate": 16000,
+    "window_seconds": 4.0375,
+    "stride_seconds": 0.5,
+    "n_fft": 512,
+    "win_length": 400,
+    "hop_length": 160,
+    "n_mels": 128,
+    "fmin": 0.0,
+    "fmax": 8000.0,
+    "floor_db": -100.0,
+    "storage_dtype": "float32",
+    "padding": "repeat"
+  },
+  "librosa_version": "0.11.0",
+  "numpy_version": "1.26.4",
+  "ffmpeg_version": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "label_policy": "modify_audio AND any strictly positive interval overlap",
+  "config_id": "fcbe75b00b095859b23e6ef5ccd82ae3da4a98061bd8cffca1cd4c28c5b88a72"
+}

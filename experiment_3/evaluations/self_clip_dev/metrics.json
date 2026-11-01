@@ -1,0 +1,89 @@
+{
+  "video_any_roc_auc": 0.9931946666666667,
+  "video_any_ap": 0.9978845376888525,
+  "accuracy": 0.966,
+  "precision": 0.994475138121547,
+  "recall": 0.96,
+  "f1": 0.9769335142469471,
+  "balanced_accuracy": 0.972,
+  "false_positive_rate": 0.016,
+  "confusion_matrix_0_1": [
+    [
+      123,
+      2
+    ],
+    [
+      15,
+      360
+    ]
+  ],
+  "videos": 500,
+  "positives": 375,
+  "negatives": 125,
+  "positive_prevalence": 0.75,
+  "threshold_logit": 4.159331321716309,
+  "threshold_probability": 0.98462217302347,
+  "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+  "target": "modify_audio OR modify_video",
+  "by_category": {
+    "real": {
+      "videos": 125,
+      "false_positive_rate": 0.016
+    },
+    "audio_only": {
+      "videos": 125,
+      "recall": 0.984
+    },
+    "visual_only": {
+      "videos": 125,
+      "recall": 0.896
+    },
+    "both": {
+      "videos": 125,
+      "recall": 1.0
+    }
+  },
+  "format": "experiment_3_v1",
+  "split": "dev",
+  "mode": "self",
+  "settings": {
+    "mode": "self",
+    "width": 256,
+    "heads": 4,
+    "layers": 1,
+    "ff_multiplier": 2,
+    "head_width": 128,
+    "dropout": 0.2,
+    "time_encoding": true,
+    "batch_size": 8,
+    "epochs": 50,
+    "patience": 8,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "balance": "class",
+    "attention_backend": "math"
+  },
+  "parameters": 1294593,
+  "checkpoint_sha256": "5cee9ee6c7ec9168341e563dd2e49b10d8a8a96bbde4ef3588584147344c3d6d",
+  "checkpoint_epoch": 20,
+  "threshold_source": "checkpoint_DEV_only",
+  "evaluated_split_id": "9c4018bbbbf67724fe994e8d70a0f4f59bb33157c05d0f70f81f9b941951eb8a",
+  "train_dev_split_ids": {
+    "train": "7924733bd37fba9aca7a39d1c76d95bbc954f0f48f56de326d23adafe169271e",
+    "dev": "9c4018bbbbf67724fe994e8d70a0f4f59bb33157c05d0f70f81f9b941951eb8a"
+  },
+  "e2b_evaluated_split_id": "d348ecdae9d8b4b0e4f446ee741f8d4bc9939edf662cfec5a153221acca42960",
+  "e2b_train_dev_split_ids": {
+    "train": "54ec8208db9a643783d6564884089f540a55425ae5b4c9d99d9b68d134a8f16b",
+    "dev": "d348ecdae9d8b4b0e4f446ee741f8d4bc9939edf662cfec5a153221acca42960"
+  },
+  "encoder_ids": {
+    "visual": "ba8fc8505ffdb6e64f540cbf6091ced00f9e4f8326b4b7bd1a51b742055cde0c",
+    "audio": "f6dcd37ec7c8f12677cb8f6258a816c55048cd3e48a751013764423c03edaac4"
+  },
+  "normalization": "6ff0fe1a21088622070bf3785ed008c379ef9a4c6c6ce6be4005cca4f86b336b",
+  "temporal_policy": "all_original_observations",
+  "test_only": false,
+  "seconds": 3.2734939790007047
+}

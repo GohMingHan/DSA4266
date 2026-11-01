@@ -1,0 +1,10 @@
+{
+  "kind": "ummaformer",
+  "checkpoint": "best.pt",
+  "project_dir": "/home/evan/dsa4266/ummaformer_tsn_flow",
+  "input_manifest": "/home/evan/dsa4266/ummaformer_tsn_flow/features/tsn_flow_train_dev_explicit_ffmpeg/manifest.json",
+  "upstream": "/home/evan/dsa4266/ummaformer_opencv_flow/upstream",
+  "python": "/home/evan/miniforge3/envs/ummaformer/bin/python",
+  "time_origin": "first_decoded_video_frame",
+  "selection_basis": "development_set"
+}

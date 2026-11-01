@@ -1,0 +1,8 @@
+# Install a compatible torch + torchvision pair separately (CPU or CUDA).
+numpy>=1.26,<3
+librosa==0.11.0
+soundfile>=0.12.1,<1
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+tqdm>=4.66,<5
+pytest>=8,<10

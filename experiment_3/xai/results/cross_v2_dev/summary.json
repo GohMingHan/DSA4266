@@ -1,0 +1,199 @@
+{
+  "split": "dev",
+  "mode": "cross",
+  "checkpoint_sha256": "da1c9baeda66fef33e72206a79ac8433895e7b21910b1464b1d8f97474e9b08d",
+  "encoder_ids": {
+    "visual": "dc0e7b441834066fa0212acc6ea27a96f73a214b11fb3d6b12028ed9d81c2309",
+    "audio": "314453656435b250a368d1adad0b7a7fb30dce5ef72576abe6aa599c1d406b90"
+  },
+  "normalization_sha256": "5684a8581961b84333ba306553776b959618a2b1e6a1f79b4f0c767fd45b015d",
+  "threshold_logit": -0.684715747833252,
+  "full_parity_max_abs_logit_error": 0.0,
+  "intervention": "Replace valid embedding tokens and pooled vectors with TRAIN mean; retain timestamps, padding, model biases.",
+  "metrics": {
+    "full": {
+      "video_any_roc_auc": 0.9985066666666667,
+      "video_any_ap": 0.9995206092155771,
+      "accuracy": 0.988,
+      "precision": 0.9893899204244032,
+      "recall": 0.9946666666666667,
+      "f1": 0.9920212765957447,
+      "balanced_accuracy": 0.9813333333333334,
+      "false_positive_rate": 0.032,
+      "confusion_matrix_0_1": [
+        [
+          121,
+          4
+        ],
+        [
+          2,
+          373
+        ]
+      ],
+      "videos": 500,
+      "positives": 375,
+      "negatives": 125,
+      "positive_prevalence": 0.75,
+      "threshold_logit": -0.684715747833252,
+      "threshold_probability": 0.33520961055268306,
+      "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+      "target": "modify_audio OR modify_video",
+      "by_category": {
+        "real": {
+          "videos": 125,
+          "false_positive_rate": 0.032
+        },
+        "audio_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "visual_only": {
+          "videos": 125,
+          "recall": 0.984
+        },
+        "both": {
+          "videos": 125,
+          "recall": 1.0
+        }
+      }
+    },
+    "no_audio": {
+      "video_any_roc_auc": 0.8661546666666666,
+      "video_any_ap": 0.9590875144166754,
+      "accuracy": 0.75,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.5,
+      "false_positive_rate": 1.0,
+      "confusion_matrix_0_1": [
+        [
+          0,
+          125
+        ],
+        [
+          0,
+          375
+        ]
+      ],
+      "videos": 500,
+      "positives": 375,
+      "negatives": 125,
+      "positive_prevalence": 0.75,
+      "threshold_logit": -0.684715747833252,
+      "threshold_probability": 0.33520961055268306,
+      "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+      "target": "modify_audio OR modify_video",
+      "by_category": {
+        "real": {
+          "videos": 125,
+          "false_positive_rate": 1.0
+        },
+        "audio_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "visual_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "both": {
+          "videos": 125,
+          "recall": 1.0
+        }
+      }
+    },
+    "no_visual": {
+      "video_any_roc_auc": 0.9531306666666667,
+      "video_any_ap": 0.9851374884741753,
+      "accuracy": 0.846,
+      "precision": 0.9837662337662337,
+      "recall": 0.808,
+      "f1": 0.8872620790629575,
+      "balanced_accuracy": 0.884,
+      "false_positive_rate": 0.04,
+      "confusion_matrix_0_1": [
+        [
+          120,
+          5
+        ],
+        [
+          72,
+          303
+        ]
+      ],
+      "videos": 500,
+      "positives": 375,
+      "negatives": 125,
+      "positive_prevalence": 0.75,
+      "threshold_logit": -0.684715747833252,
+      "threshold_probability": 0.33520961055268306,
+      "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+      "target": "modify_audio OR modify_video",
+      "by_category": {
+        "real": {
+          "videos": 125,
+          "false_positive_rate": 0.04
+        },
+        "audio_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "visual_only": {
+          "videos": 125,
+          "recall": 0.424
+        },
+        "both": {
+          "videos": 125,
+          "recall": 1.0
+        }
+      }
+    },
+    "neither": {
+      "video_any_roc_auc": 0.5349653333333334,
+      "video_any_ap": 0.7893630904577895,
+      "accuracy": 0.75,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "balanced_accuracy": 0.5,
+      "false_positive_rate": 1.0,
+      "confusion_matrix_0_1": [
+        [
+          0,
+          125
+        ],
+        [
+          0,
+          375
+        ]
+      ],
+      "videos": 500,
+      "positives": 375,
+      "negatives": 125,
+      "positive_prevalence": 0.75,
+      "threshold_logit": -0.684715747833252,
+      "threshold_probability": 0.33520961055268306,
+      "score_rule": "fusion_logit (higher = any manipulation); sigmoid is uncalibrated",
+      "target": "modify_audio OR modify_video",
+      "by_category": {
+        "real": {
+          "videos": 125,
+          "false_positive_rate": 1.0
+        },
+        "audio_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "visual_only": {
+          "videos": 125,
+          "recall": 1.0
+        },
+        "both": {
+          "videos": 125,
+          "recall": 1.0
+        }
+      }
+    }
+  }
+}

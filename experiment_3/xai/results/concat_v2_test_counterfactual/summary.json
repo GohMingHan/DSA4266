@@ -1,0 +1,172 @@
+{
+  "checkpoint": "/home/evan/dsa4266/experiment_3/runs/concat_clip_v2_new5000_s42/best.pt",
+  "dataset": "/home/evan/dsa4266/experiment_3/work/sequences_clip_v2_new5000_with_test",
+  "model": "concat",
+  "threshold_logit": 1.7369213104248047,
+  "source_families": 125,
+  "pairings": 2000,
+  "unchanged_max_abs_logit_error": 0.0,
+  "interpretation": "Counterfactual embeddings; no ground-truth labels assigned to swapped pairs",
+  "groups": [
+    {
+      "visual_category": "real",
+      "audio_category": "real",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": 0.0,
+      "positive_delta_fraction": 0.0,
+      "prediction_flip_rate": 0.0,
+      "predicted_fake_rate": 0.024
+    },
+    {
+      "visual_category": "real",
+      "audio_category": "audio_only",
+      "n": 125,
+      "median_delta_logit": 25.02255153656006,
+      "mean_delta_logit": 26.267965737819672,
+      "positive_delta_fraction": 0.984,
+      "prediction_flip_rate": 0.864,
+      "predicted_fake_rate": 0.888
+    },
+    {
+      "visual_category": "real",
+      "audio_category": "visual_only",
+      "n": 125,
+      "median_delta_logit": 1.0917205810546875,
+      "mean_delta_logit": 1.4190022894144059,
+      "positive_delta_fraction": 0.936,
+      "prediction_flip_rate": 0.008,
+      "predicted_fake_rate": 0.032
+    },
+    {
+      "visual_category": "real",
+      "audio_category": "both",
+      "n": 125,
+      "median_delta_logit": 25.900540351867676,
+      "mean_delta_logit": 27.393301424860955,
+      "positive_delta_fraction": 0.992,
+      "prediction_flip_rate": 0.888,
+      "predicted_fake_rate": 0.912
+    },
+    {
+      "visual_category": "audio_only",
+      "audio_category": "real",
+      "n": 125,
+      "median_delta_logit": -23.301777362823486,
+      "mean_delta_logit": -25.50963005208969,
+      "positive_delta_fraction": 0.016,
+      "prediction_flip_rate": 0.56,
+      "predicted_fake_rate": 0.416
+    },
+    {
+      "visual_category": "audio_only",
+      "audio_category": "audio_only",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": 0.0,
+      "positive_delta_fraction": 0.0,
+      "prediction_flip_rate": 0.0,
+      "predicted_fake_rate": 0.976
+    },
+    {
+      "visual_category": "audio_only",
+      "audio_category": "visual_only",
+      "n": 125,
+      "median_delta_logit": -22.841273307800293,
+      "mean_delta_logit": -24.09055091392994,
+      "positive_delta_fraction": 0.016,
+      "prediction_flip_rate": 0.416,
+      "predicted_fake_rate": 0.56
+    },
+    {
+      "visual_category": "audio_only",
+      "audio_category": "both",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": 1.0761481202840806,
+      "positive_delta_fraction": 0.464,
+      "prediction_flip_rate": 0.008,
+      "predicted_fake_rate": 0.968
+    },
+    {
+      "visual_category": "visual_only",
+      "audio_category": "real",
+      "n": 125,
+      "median_delta_logit": -1.1038587093353271,
+      "mean_delta_logit": -1.3154513897895812,
+      "positive_delta_fraction": 0.072,
+      "prediction_flip_rate": 0.088,
+      "predicted_fake_rate": 0.736
+    },
+    {
+      "visual_category": "visual_only",
+      "audio_category": "audio_only",
+      "n": 125,
+      "median_delta_logit": 19.133852005004883,
+      "mean_delta_logit": 20.741330369234085,
+      "positive_delta_fraction": 0.952,
+      "prediction_flip_rate": 0.168,
+      "predicted_fake_rate": 0.992
+    },
+    {
+      "visual_category": "visual_only",
+      "audio_category": "visual_only",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": 0.0,
+      "positive_delta_fraction": 0.0,
+      "prediction_flip_rate": 0.0,
+      "predicted_fake_rate": 0.824
+    },
+    {
+      "visual_category": "visual_only",
+      "audio_category": "both",
+      "n": 125,
+      "median_delta_logit": 20.49857932329178,
+      "mean_delta_logit": 21.81620345044136,
+      "positive_delta_fraction": 0.96,
+      "prediction_flip_rate": 0.16,
+      "predicted_fake_rate": 0.984
+    },
+    {
+      "visual_category": "both",
+      "audio_category": "real",
+      "n": 125,
+      "median_delta_logit": -20.41300106048584,
+      "mean_delta_logit": -21.49746858215332,
+      "positive_delta_fraction": 0.04,
+      "prediction_flip_rate": 0.112,
+      "predicted_fake_rate": 0.88
+    },
+    {
+      "visual_category": "both",
+      "audio_category": "audio_only",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": -1.028508505821228,
+      "positive_delta_fraction": 0.312,
+      "prediction_flip_rate": 0.008,
+      "predicted_fake_rate": 1.0
+    },
+    {
+      "visual_category": "both",
+      "audio_category": "visual_only",
+      "n": 125,
+      "median_delta_logit": -18.978264451026917,
+      "mean_delta_logit": -20.27878375017643,
+      "positive_delta_fraction": 0.04,
+      "prediction_flip_rate": 0.04,
+      "predicted_fake_rate": 0.952
+    },
+    {
+      "visual_category": "both",
+      "audio_category": "both",
+      "n": 125,
+      "median_delta_logit": 0.0,
+      "mean_delta_logit": 0.0,
+      "positive_delta_fraction": 0.0,
+      "prediction_flip_rate": 0.0,
+      "predicted_fake_rate": 0.992
+    }
+  ]
+}

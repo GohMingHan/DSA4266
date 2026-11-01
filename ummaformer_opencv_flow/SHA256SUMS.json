@@ -1,0 +1,17 @@
+{
+  "LICENSE": "c842c615bacd1acfc233bb36d9d3ab34013a1a575ea0060394dcfbcefe7a2af8",
+  "README.md": "b64989b5fa305a98d5c0a7d0f830350c3cf1c1331f1683e669c3e7f69f560fcd",
+  "VALIDATION_REPORT.md": "6e5cba17706edf47459080492f14344460a16b12bf5cd834fecb9f1273b9d928",
+  "cohort.py": "3f406a634cd15ac2845f0882841d855ef8a31a629322d2462fa4faba6c9bb8b9",
+  "common.py": "89331dc460d7cd3d89b314dcff0bbdcce0dc00776e807a1ece803b2afbf78df6",
+  "experiment_metrics.py": "43fc722baba503a2983324948b980f58ea6ef4e30fddf70d8f56c345befc83d6",
+  "extract_rgb_flow.py": "2664d20f6d3a88e89c2436eb53b161124cd4f32b364b06426d62ad1dec2af37d",
+  "requirements.txt": "edbd36ae8ae7b7b310b8208e3a7ab49f323bf932a44be659d7d1c0e02fad0f98",
+  "run_experiment.py": "9138286e86bb044fea3b86aacbacd9f4617d57d910c3a617b7ce4c8bf870114e",
+  "run_pipeline.sh": "2d06080e370fb1641243265276f7334fb1ed9a3ffd7cf1c0022496805c148855",
+  "setup.sh": "ecfe2fb6c6c02331d8615f0ca840c3dbd72813e4dd8745e30d86d9f6e94f722e",
+  "tests/test_rgb_flow.py": "e3a3148fa6bacec4d4d8604de8ae6f28f7bec1e53e07c8e596f3a726c2e04cf5",
+  "upstream_adapter.py": "9c016b36717712d232918d058d5fd1a8b0aab4fe70c5fe1268170327178302c3",
+  "video_io.py": "006627f78a7467ce2d8e11c3c3ec49385558a52d6079d17b4918335efe745dbd",
+  "visual_data.py": "c5ad882f9db32d9ef3b8e4d834f33c0bcefd9bd9c32e066fccd3737a9f0557c4"
+}

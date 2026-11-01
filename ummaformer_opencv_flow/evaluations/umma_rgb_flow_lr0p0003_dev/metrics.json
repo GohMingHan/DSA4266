@@ -1,0 +1,41 @@
+{
+  "video_visual_roc_auc": 0.8284,
+  "video_visual_ap": 0.8395230800592989,
+  "threshold": 0.3176553547382355,
+  "threshold_rule": "dev_max_f1_highest_tie",
+  "f1": 0.7675675675675676,
+  "precision": 0.6983606557377049,
+  "recall": 0.852,
+  "balanced_accuracy": 0.742,
+  "confusion_matrix_0_1": [
+    [
+      158,
+      92
+    ],
+    [
+      37,
+      213
+    ]
+  ],
+  "videos": 500,
+  "visual_positives": 250,
+  "visual_negatives": 250,
+  "score_rule": "maximum_final_proposal_score_or_zero",
+  "all_cohort_visual_temporal_ap": {
+    "AP@0.50": 0.5978161205185784,
+    "AP@0.75": 0.36121613676810427,
+    "AP@0.95": 0.005394094332832521
+  },
+  "ground_truth_segments": 276,
+  "proposals": 50000,
+  "negative_videos": 250,
+  "proposals_on_negative_videos": 25000,
+  "evaluation_scope": "all videos; audio-only and genuine videos have empty visual ground truth",
+  "interpolation": "continuous precision envelope; one-to-one matching at each tIoU",
+  "checkpoint": "/home/evan/dsa4266/ummaformer_opencv_flow/runs/umma_rgb_flow_lr0p0003_s42/best_video_auc.pt",
+  "checkpoint_sha256": "aa7835a475d7696d64ef0724899852bca71a94421d2a41b3daeeb84b1a3a9583",
+  "checkpoint_epoch": 11,
+  "split": "dev",
+  "threshold_source": "checkpoint_development_set",
+  "evaluated_split_identity": "50998a69452b5ee565146b52b9a9be447dc87e51104769ffedc5560847447aa9"
+}

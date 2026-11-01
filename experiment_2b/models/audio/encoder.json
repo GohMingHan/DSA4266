@@ -1,0 +1,11 @@
+{
+  "kind": "experiment_2a",
+  "checkpoint": "best.pt",
+  "project_dir": "/home/evan/dsa4266/experiment_2a",
+  "input_root": "/mnt/c/Users/wuche/Downloads/LAV-DF-5000/LAV-DF-5000",
+  "aasist_dir": "/home/evan/dsa4266/experiment_2a/upstream_aasist",
+  "python": "/home/evan/miniforge3/envs/ummaformer/bin/python",
+  "batch_size": 16,
+  "time_origin": "first_decoded_video_frame",
+  "selection_basis": "development_set"
+}
