@@ -18,6 +18,65 @@ This repository documents an audio-based deepfake detection experiment comparing
 
 The experiments use **LAV-DF (Localized Audio Visual DeepFake)**. The prepared experiment data include **4,000 training**, **500 development** and **500 test videos**. The test split contains **250 authentic** and **250 manipulated** samples.
 
+## Dataset and Experimental Resources
+
+The datasets, experimental resources, and explainability outputs used in this project are hosted on Kaggle. Due to the size of the datasets, they are maintained separately from the GitHub repository.
+
+### Kaggle Resources
+
+| Resource | Description | Link |
+|---|---|---|
+| Experiment 2A (Version 10) | Published Experiment 2A dataset, with Version 10 referenced for reproducibility. | [Kaggle Dataset](https://www.kaggle.com/datasets/gohminghan/experiment-2a/versions/10) |
+| LAV-DF Experiment 2A Audio | Audio dataset associated with the deepfake detection experiments. | [Audio Dataset](https://www.kaggle.com/datasets/gohminghan/lav-df-experiment-2a-audio) |
+| Deepfake Audio XAI Results | Published explainability results associated with ResNet18 and AASIST. | [XAI Results](https://www.kaggle.com/datasets/gohminghan/deepfake-audio-xai-results) |
+| Audio Extraction | Kaggle notebook documenting the audio extraction workflow. | [Audio Extraction Notebook](https://www.kaggle.com/code/gohminghan/audio-extraction) |
+
+### Downloading the Datasets
+
+The datasets can be downloaded through the Kaggle website or using the Kaggle API.
+
+Install the Kaggle CLI:
+
+```bash
+pip install kaggle
+```
+
+Download the Experiment 2A dataset:
+
+```bash
+kaggle datasets download -d gohminghan/experiment-2a -v 10 --unzip
+```
+
+Download the LAV-DF audio dataset:
+
+```bash
+kaggle datasets download -d gohminghan/lav-df-experiment-2a-audio --unzip
+```
+
+Download the explainability results:
+
+```bash
+kaggle datasets download -d gohminghan/deepfake-audio-xai-results --unzip
+```
+
+Run these commands in separate directories to avoid unintended filename collisions.
+
+### Reproducibility
+
+The project evaluates two deep learning architectures, ResNet18 and AASIST, for audio deepfake detection.
+
+The published resources support the following stages of the experimental workflow:
+
+1. Audio extraction and preparation.
+2. Model training and evaluation.
+3. Classification performance analysis.
+4. Explainable AI analysis using Integrated Gradients.
+5. Acoustic feature analysis and interpretation.
+
+The GitHub repository contains the experiment implementation and documentation, while Kaggle provides access to the associated datasets and published outputs.
+
+**Note:** Access to the original LAV-DF material and any redistributed derivatives remains subject to the applicable dataset licence and usage conditions.
+
 Audio is processed at **16 kHz** and segmented into windows of **64,600 samples (approximately 4.04 seconds)**, using a **0.5-second stride**. Each model receives a different representation of these windows:
 
 | Component | ResNet18 | AASIST |
