@@ -1,0 +1,154 @@
+{
+  "source_repository": "https://github.com/lazisa2004/dsa4266-visual-final",
+  "source_commit": "d18e78722e0176fc1eef874b960247756f3a3edf",
+  "files": [
+    {
+      "path": "src/__init__.py",
+      "source_sha256": "32e7c2dea16fc5031492dc22bf6cfee0ed4b4839608c444fc58acee8e08bd8a5",
+      "submission_sha256": "32e7c2dea16fc5031492dc22bf6cfee0ed4b4839608c444fc58acee8e08bd8a5",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/backup.py",
+      "source_sha256": "db4d71f3103ca00713abe64e3d9c987a181de9383f0957e29afae28744b50218",
+      "submission_sha256": "581d6c072662d37778994d26f985a96607d6705d21408d7d20437b53d3c8b3ae",
+      "adaptation": "Source-only archive allowlist targets run.py/settings/licence/config files instead of obsolete notebook documentation. Training recovery ZIP functions unchanged."
+    },
+    {
+      "path": "src/build_candidates.py",
+      "source_sha256": "4bb7310f05d2970fdea8b63d7ceef33e7370f48c2480eec59cb8abbc5bcd32e4",
+      "submission_sha256": "4bb7310f05d2970fdea8b63d7ceef33e7370f48c2480eec59cb8abbc5bcd32e4",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/checkpoints.py",
+      "source_sha256": "36e9c6d135c8f73515fee70fc8d312b3c90b38f99be0ab5311c56db912a1607a",
+      "submission_sha256": "36e9c6d135c8f73515fee70fc8d312b3c90b38f99be0ab5311c56db912a1607a",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/clip_attribution.py",
+      "source_sha256": "f2ad227f784918db19a2ca15b66383c791651f6b5acfa1a2243d62d0485f52cb",
+      "submission_sha256": "f2ad227f784918db19a2ca15b66383c791651f6b5acfa1a2243d62d0485f52cb",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/clip_model.py",
+      "source_sha256": "e0394d62b8b72ac79fc62266855b1d102a85329153a495313dc7cd461d886fee",
+      "submission_sha256": "e0394d62b8b72ac79fc62266855b1d102a85329153a495313dc7cd461d886fee",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/clip_reporting.py",
+      "source_sha256": "a7cd609503852270d1127e562fa283441abd90f1b8ea1bce99c4f4a4498654aa",
+      "submission_sha256": "a7cd609503852270d1127e562fa283441abd90f1b8ea1bce99c4f4a4498654aa",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/clip_workflow.py",
+      "source_sha256": "d5051e242c6b8915a438859e5198c8a578f3c2836fd9376561cce75988093720",
+      "submission_sha256": "544a6e7eca821c125cd735ea76b8d16bf8dc98992a78ad803ec29f041085ff6e",
+      "adaptation": "Source provenance hashes the submission module directory rather than the external output workspace."
+    },
+    {
+      "path": "src/config.py",
+      "source_sha256": "1fcac8e280eece9205aae0ff6cdac7431c6c836619be40b971d1b99dcf551388",
+      "submission_sha256": "1fcac8e280eece9205aae0ff6cdac7431c6c836619be40b971d1b99dcf551388",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/data.py",
+      "source_sha256": "fef24f4f171601cdf555ca57e0742ee99cf76265d6b0e4f57876c24ee3c5d270",
+      "submission_sha256": "fef24f4f171601cdf555ca57e0742ee99cf76265d6b0e4f57876c24ee3c5d270",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/evaluation.py",
+      "source_sha256": "8f39c8b12921f755007c0e41adac3765d3a14f823c259f3b11adf520a2e087c5",
+      "submission_sha256": "8f39c8b12921f755007c0e41adac3765d3a14f823c259f3b11adf520a2e087c5",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/face_mask.py",
+      "source_sha256": "80d497371190ada60a43aa8e17f737d6ba75fd40ac5513cfa1b39edca91445bf",
+      "submission_sha256": "80d497371190ada60a43aa8e17f737d6ba75fd40ac5513cfa1b39edca91445bf",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/frame_cache.py",
+      "source_sha256": "622bb032930c33b7063438d3428ab0f4d769915ede8bf006e065be3ca47e1d0c",
+      "submission_sha256": "1fc252591548908bdb7b394c52be3c52f27373e08fa210bb5a299b7583e923a2",
+      "adaptation": "Source provenance hashes the submission module directory rather than the external output workspace."
+    },
+    {
+      "path": "src/gradcam.py",
+      "source_sha256": "37299df46dd08b9665f39b19d05b2667862cb52ed563e9bb42ea701724ead67f",
+      "submission_sha256": "37299df46dd08b9665f39b19d05b2667862cb52ed563e9bb42ea701724ead67f",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/models.py",
+      "source_sha256": "fe9f6aad6cb0e3d0aa257ad9cef5206c55d60ec571469cb467f9ec8d563e640c",
+      "submission_sha256": "fe9f6aad6cb0e3d0aa257ad9cef5206c55d60ec571469cb467f9ec8d563e640c",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/notebook.py",
+      "source_sha256": "59ace5ecaa4f4c4cc7f02a8f5729cd8be5db59f8f409141a8389478587ab0668",
+      "submission_sha256": "59ace5ecaa4f4c4cc7f02a8f5729cd8be5db59f8f409141a8389478587ab0668",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/prepared_frames.py",
+      "source_sha256": "555a49fb9ca8961e4c80e45af54594fc18fc477e338c73b290584922c45f384e",
+      "submission_sha256": "b07da38e28b5cd7c875b5388a5e49a5e0dcb24ff69cea43c4773ec12185df041",
+      "adaptation": "Accept a rebuilt SQLite only after complete original logical schema/row validation; bind readiness to actual file hash. Original pool hash and pixel/PTS checks unchanged."
+    },
+    {
+      "path": "src/reporting.py",
+      "source_sha256": "88c401d58740ba6b68eb04de36f2670ef776f2ee21510d73dc08efee581a87b2",
+      "submission_sha256": "88c401d58740ba6b68eb04de36f2670ef776f2ee21510d73dc08efee581a87b2",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/session_inputs.py",
+      "source_sha256": "6a6f9b5246b36bbcf5a47fd7a6c1824a604ceb842e30e8558315ea4abe273cc3",
+      "submission_sha256": "6cd9ff6d9fdbb80f717750779ca4a724461ca51a9225a7bd0d76cc9e366011fb",
+      "adaptation": "External output provenance; logically identical SQLite rebuilds accepted only after complete validation; clip manifest retains canonical reference index identity and unchanged records."
+    },
+    {
+      "path": "src/temporal.py",
+      "source_sha256": "d9e0144ff42980d2011e26563f5bf5fe5c649b15e884580ac03a8a6f7385cb1c",
+      "submission_sha256": "d9e0144ff42980d2011e26563f5bf5fe5c649b15e884580ac03a8a6f7385cb1c",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/training.py",
+      "source_sha256": "a379a8bf7e72f706f6750963982098dec6370e192a9554842117ff8bf720057e",
+      "submission_sha256": "a379a8bf7e72f706f6750963982098dec6370e192a9554842117ff8bf720057e",
+      "adaptation": "Copied unchanged"
+    },
+    {
+      "path": "src/workflow.py",
+      "source_sha256": "712f806a5232e5fa0051d76b8b4dc13fde070dac8b50b4a185cb831c0623cac0",
+      "submission_sha256": "712f806a5232e5fa0051d76b8b4dc13fde070dac8b50b4a185cb831c0623cac0",
+      "adaptation": "Copied unchanged"
+    }
+  ],
+  "entry_point": "run.py; src/cli.py adds terminal-only orchestration; no notebook needed",
+  "artifacts": {
+    "index_sha256": "ac3cd8c440f0bb1e53cf955bcc6a2596e9ee1bc40e508f254c82e10bde13cfcb",
+    "index_logical_sha256": "af2d57a66eeef994bd56161b415fcde4bc8a898a9d8cf286130e5467acf3f33e",
+    "pool_sha256": "8bcb5c9845f92b43e36213f22e410bcecedf983f7db87250f02a9968868eea92",
+    "seed": 4266,
+    "train_pool_per_class": 10000,
+    "epoch_frame_per_class": 4000,
+    "dev_frames": 41746,
+    "dev_videos": 500,
+    "dev_clip_count": 3551,
+    "epoch_clip_per_class": 1500
+  },
+  "test_policy": "Original runtime/architecture/data/AMP/checkpoint/metric/attribution tests retained. Notebook-source and private GitHub bootstrap assertions excluded; CLI tests replace interface assertions. Original 156-definition golden fixture unchanged.",
+  "checkpoint_compatibility": "Model state_dict names, project identity, experimental configs and checkpoint schema retained. Exact input identities remain mandatory for resume.",
+  "test_access": "DEV only; protected TEST is not available from run.py"
+}

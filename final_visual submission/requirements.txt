@@ -1,0 +1,13 @@
+# Preserve Kaggle's existing matching CUDA torch/torchvision pair.
+torch>=2.6
+torchvision>=0.21
+numpy>=2
+av>=14
+Pillow>=9
+matplotlib>=3.7
+ipython>=8
+# Exactly one OpenCV distribution; notebook setup checks conflicts before import.
+opencv-contrib-python==4.13.0.92
+mediapipe==0.10.32
+# Sixth model only; preserve the installed matching CUDA torch/torchvision pair.
+transformers==4.57.1

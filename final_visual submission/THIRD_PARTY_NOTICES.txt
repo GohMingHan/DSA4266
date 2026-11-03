@@ -1,0 +1,38 @@
+DSA4266 visual-model coursework submission
+
+Project code is retained from lazisa2004/dsa4266-visual-final at the commit
+recorded in configs/source_manifest.json. Authors retain their existing rights;
+this notice does not invent a licence for collaborators' contributions.
+
+YuNet helpers/model attribution: Shiqi Yu and OpenCV Zoo. The retained MIT text
+is src/YUNET_LICENSE.txt. Model weights are external and are not redistributed.
+https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet
+
+CLIP: OpenAI, MIT, copyright 2021 OpenAI.
+https://github.com/openai/CLIP/blob/main/LICENSE
+The model is instantiated through Hugging Face Transformers (Apache-2.0).
+https://github.com/huggingface/transformers/blob/main/LICENSE
+No pretrained or fine-tuned CLIP weights are distributed in this folder.
+
+MediaPipe: Google, Apache-2.0; external Face Landmarker task/model-card terms apply.
+https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE
+https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker
+OpenCV: Apache-2.0 for the selected 4.x runtime.
+https://github.com/opencv/opencv/blob/4.x/LICENSE
+
+PyTorch/torchvision, NumPy, PyAV, Pillow, Matplotlib and IPython are installed
+separately. Their installed distributions retain their own licences/notices.
+https://github.com/pytorch/pytorch/blob/main/LICENSE
+https://github.com/pytorch/vision/blob/main/LICENSE
+https://numpy.org/doc/stable/license.html
+https://github.com/PyAV-Org/PyAV/blob/main/LICENSE.txt
+https://github.com/python-pillow/Pillow/blob/main/LICENSE
+https://matplotlib.org/stable/project/license.html
+https://github.com/ipython/ipython/blob/main/COPYING.rst
+
+LAV-DF: Zhixi Cai and the LAV-DF authors; CC BY-NC 4.0.
+https://github.com/ControlNet/LAV-DF/blob/master/LICENSE
+VoxCeleb agreements also apply to authorized source media.
+https://www.robots.ox.ac.uk/~vgg/data/voxceleb/
+No dataset media or derived annotation records are included; only protocol
+counts, immutable reference hashes and the existing artifact generators ship.

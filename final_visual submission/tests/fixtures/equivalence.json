@@ -1,0 +1,1439 @@
+{
+  "torch": "2.14.1+cpu",
+  "configurations": {
+    "resnet50_baseline": {
+      "label": "ResNet50 baseline",
+      "input": "full_frame",
+      "config": {
+        "model": "resnet50",
+        "seed": 4266,
+        "batch_size": 32,
+        "epochs": 10,
+        "warmup_epochs": 2,
+        "patience": 3,
+        "head_lr": 0.0001,
+        "backbone_lr": 1.5e-05,
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "flip_probability": 0.5,
+        "finetune_final_stage": true,
+        "train_per_class": 4000,
+        "clip_per_class": 2000,
+        "workers": 2,
+        "prefetch_factor": 2,
+        "cache_mib": 0,
+        "amp": true,
+        "threshold": 0.5,
+        "topk_fraction": 0.05,
+        "scheduler_patience": 1,
+        "loader_timeout_seconds": 120.0,
+        "train_progress_every": 50,
+        "dev_progress_every": 200,
+        "heartbeat_seconds": 30.0,
+        "max_consecutive_gradient_skips": 5,
+        "max_gradient_skips_per_epoch": 20,
+        "checkpoint_selection": "frame_roc_auc",
+        "training_pool": "fixed20k"
+      },
+      "checkpoint_monitor": "DEV frame ROC-AUC",
+      "scheduler_monitor": "DEV frame ROC-AUC",
+      "comparison_metric": "DEV video trapezoidal PR-AUC",
+      "classification_threshold": 0.5
+    },
+    "resnet50_face_mask": {
+      "label": "ResNet50 Face mask",
+      "input": "face_mask",
+      "config": {
+        "model": "resnet50",
+        "seed": 4266,
+        "batch_size": 32,
+        "epochs": 10,
+        "warmup_epochs": 2,
+        "patience": 3,
+        "head_lr": 0.0001,
+        "backbone_lr": 1.5e-05,
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "flip_probability": 0.5,
+        "finetune_final_stage": true,
+        "train_per_class": 4000,
+        "clip_per_class": 2000,
+        "workers": 2,
+        "prefetch_factor": 2,
+        "cache_mib": 0,
+        "amp": true,
+        "threshold": 0.5,
+        "topk_fraction": 0.05,
+        "scheduler_patience": 1,
+        "loader_timeout_seconds": 120.0,
+        "train_progress_every": 50,
+        "dev_progress_every": 200,
+        "heartbeat_seconds": 30.0,
+        "max_consecutive_gradient_skips": 5,
+        "max_gradient_skips_per_epoch": 20,
+        "checkpoint_selection": "frame_roc_auc",
+        "training_pool": "fixed20k"
+      },
+      "checkpoint_monitor": "DEV frame ROC-AUC",
+      "scheduler_monitor": "DEV frame ROC-AUC",
+      "comparison_metric": "DEV video trapezoidal PR-AUC",
+      "classification_threshold": 0.5
+    },
+    "resnet50_lstm": {
+      "label": "ResNet50 LSTM",
+      "input": "full_frame_clips",
+      "config": {
+        "model": "resnet50_lstm",
+        "seed": 4266,
+        "batch_size": 8,
+        "epochs": 10,
+        "warmup_epochs": 0,
+        "patience": 3,
+        "head_lr": 0.0001,
+        "backbone_lr": 1.5e-05,
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "flip_probability": 0.5,
+        "finetune_final_stage": false,
+        "train_per_class": 4000,
+        "clip_per_class": 1500,
+        "workers": 0,
+        "prefetch_factor": 2,
+        "cache_mib": 0,
+        "amp": true,
+        "threshold": 0.5,
+        "topk_fraction": 0.05,
+        "scheduler_patience": 1,
+        "loader_timeout_seconds": 120.0,
+        "train_progress_every": 50,
+        "dev_progress_every": 200,
+        "heartbeat_seconds": 30.0,
+        "max_consecutive_gradient_skips": 5,
+        "max_gradient_skips_per_epoch": 20,
+        "checkpoint_selection": "clip_roc_auc",
+        "training_pool": "temporal_clips",
+        "hidden_size": 128,
+        "lstm_layers": 1,
+        "feature_microbatch": 32
+      },
+      "checkpoint_monitor": "DEV clip ROC-AUC",
+      "scheduler_monitor": "DEV clip ROC-AUC",
+      "comparison_metric": "DEV video trapezoidal PR-AUC",
+      "classification_threshold": 0.5
+    },
+    "efficientnet_b0_baseline": {
+      "label": "EfficientNet-B0 baseline",
+      "input": "full_frame",
+      "config": {
+        "model": "efficientnet_b0",
+        "seed": 4266,
+        "batch_size": 32,
+        "epochs": 10,
+        "warmup_epochs": 2,
+        "patience": 3,
+        "head_lr": 0.0001,
+        "backbone_lr": 1.5e-05,
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "flip_probability": 0.5,
+        "finetune_final_stage": true,
+        "train_per_class": 4000,
+        "clip_per_class": 2000,
+        "workers": 2,
+        "prefetch_factor": 2,
+        "cache_mib": 0,
+        "amp": true,
+        "threshold": 0.5,
+        "topk_fraction": 0.05,
+        "scheduler_patience": 1,
+        "loader_timeout_seconds": 120.0,
+        "train_progress_every": 50,
+        "dev_progress_every": 200,
+        "heartbeat_seconds": 30.0,
+        "max_consecutive_gradient_skips": 5,
+        "max_gradient_skips_per_epoch": 20,
+        "checkpoint_selection": "frame_roc_auc",
+        "training_pool": "fixed20k"
+      },
+      "checkpoint_monitor": "DEV frame ROC-AUC",
+      "scheduler_monitor": "DEV frame ROC-AUC",
+      "comparison_metric": "DEV video trapezoidal PR-AUC",
+      "classification_threshold": 0.5
+    },
+    "efficientnet_b0_face_mask": {
+      "label": "EfficientNet-B0 Face mask",
+      "input": "face_mask",
+      "config": {
+        "model": "efficientnet_b0",
+        "seed": 4266,
+        "batch_size": 32,
+        "epochs": 10,
+        "warmup_epochs": 2,
+        "patience": 3,
+        "head_lr": 0.0001,
+        "backbone_lr": 1.5e-05,
+        "weight_decay": 0.0001,
+        "dropout": 0.3,
+        "flip_probability": 0.5,
+        "finetune_final_stage": true,
+        "train_per_class": 4000,
+        "clip_per_class": 2000,
+        "workers": 2,
+        "prefetch_factor": 2,
+        "cache_mib": 0,
+        "amp": true,
+        "threshold": 0.5,
+        "topk_fraction": 0.05,
+        "scheduler_patience": 1,
+        "loader_timeout_seconds": 120.0,
+        "train_progress_every": 50,
+        "dev_progress_every": 200,
+        "heartbeat_seconds": 30.0,
+        "max_consecutive_gradient_skips": 5,
+        "max_gradient_skips_per_epoch": 20,
+        "checkpoint_selection": "frame_roc_auc",
+        "training_pool": "fixed20k"
+      },
+      "checkpoint_monitor": "DEV frame ROC-AUC",
+      "scheduler_monitor": "DEV frame ROC-AUC",
+      "comparison_metric": "DEV video trapezoidal PR-AUC",
+      "classification_threshold": 0.5
+    }
+  },
+  "models": {
+    "resnet50": {
+      "parameter_names": [
+        "network.conv1.weight",
+        "network.bn1.weight",
+        "network.bn1.bias",
+        "network.layer1.0.conv1.weight",
+        "network.layer1.0.bn1.weight",
+        "network.layer1.0.bn1.bias",
+        "network.layer1.0.conv2.weight",
+        "network.layer1.0.bn2.weight",
+        "network.layer1.0.bn2.bias",
+        "network.layer1.0.conv3.weight",
+        "network.layer1.0.bn3.weight",
+        "network.layer1.0.bn3.bias",
+        "network.layer1.0.downsample.0.weight",
+        "network.layer1.0.downsample.1.weight",
+        "network.layer1.0.downsample.1.bias",
+        "network.layer1.1.conv1.weight",
+        "network.layer1.1.bn1.weight",
+        "network.layer1.1.bn1.bias",
+        "network.layer1.1.conv2.weight",
+        "network.layer1.1.bn2.weight",
+        "network.layer1.1.bn2.bias",
+        "network.layer1.1.conv3.weight",
+        "network.layer1.1.bn3.weight",
+        "network.layer1.1.bn3.bias",
+        "network.layer1.2.conv1.weight",
+        "network.layer1.2.bn1.weight",
+        "network.layer1.2.bn1.bias",
+        "network.layer1.2.conv2.weight",
+        "network.layer1.2.bn2.weight",
+        "network.layer1.2.bn2.bias",
+        "network.layer1.2.conv3.weight",
+        "network.layer1.2.bn3.weight",
+        "network.layer1.2.bn3.bias",
+        "network.layer2.0.conv1.weight",
+        "network.layer2.0.bn1.weight",
+        "network.layer2.0.bn1.bias",
+        "network.layer2.0.conv2.weight",
+        "network.layer2.0.bn2.weight",
+        "network.layer2.0.bn2.bias",
+        "network.layer2.0.conv3.weight",
+        "network.layer2.0.bn3.weight",
+        "network.layer2.0.bn3.bias",
+        "network.layer2.0.downsample.0.weight",
+        "network.layer2.0.downsample.1.weight",
+        "network.layer2.0.downsample.1.bias",
+        "network.layer2.1.conv1.weight",
+        "network.layer2.1.bn1.weight",
+        "network.layer2.1.bn1.bias",
+        "network.layer2.1.conv2.weight",
+        "network.layer2.1.bn2.weight",
+        "network.layer2.1.bn2.bias",
+        "network.layer2.1.conv3.weight",
+        "network.layer2.1.bn3.weight",
+        "network.layer2.1.bn3.bias",
+        "network.layer2.2.conv1.weight",
+        "network.layer2.2.bn1.weight",
+        "network.layer2.2.bn1.bias",
+        "network.layer2.2.conv2.weight",
+        "network.layer2.2.bn2.weight",
+        "network.layer2.2.bn2.bias",
+        "network.layer2.2.conv3.weight",
+        "network.layer2.2.bn3.weight",
+        "network.layer2.2.bn3.bias",
+        "network.layer2.3.conv1.weight",
+        "network.layer2.3.bn1.weight",
+        "network.layer2.3.bn1.bias",
+        "network.layer2.3.conv2.weight",
+        "network.layer2.3.bn2.weight",
+        "network.layer2.3.bn2.bias",
+        "network.layer2.3.conv3.weight",
+        "network.layer2.3.bn3.weight",
+        "network.layer2.3.bn3.bias",
+        "network.layer3.0.conv1.weight",
+        "network.layer3.0.bn1.weight",
+        "network.layer3.0.bn1.bias",
+        "network.layer3.0.conv2.weight",
+        "network.layer3.0.bn2.weight",
+        "network.layer3.0.bn2.bias",
+        "network.layer3.0.conv3.weight",
+        "network.layer3.0.bn3.weight",
+        "network.layer3.0.bn3.bias",
+        "network.layer3.0.downsample.0.weight",
+        "network.layer3.0.downsample.1.weight",
+        "network.layer3.0.downsample.1.bias",
+        "network.layer3.1.conv1.weight",
+        "network.layer3.1.bn1.weight",
+        "network.layer3.1.bn1.bias",
+        "network.layer3.1.conv2.weight",
+        "network.layer3.1.bn2.weight",
+        "network.layer3.1.bn2.bias",
+        "network.layer3.1.conv3.weight",
+        "network.layer3.1.bn3.weight",
+        "network.layer3.1.bn3.bias",
+        "network.layer3.2.conv1.weight",
+        "network.layer3.2.bn1.weight",
+        "network.layer3.2.bn1.bias",
+        "network.layer3.2.conv2.weight",
+        "network.layer3.2.bn2.weight",
+        "network.layer3.2.bn2.bias",
+        "network.layer3.2.conv3.weight",
+        "network.layer3.2.bn3.weight",
+        "network.layer3.2.bn3.bias",
+        "network.layer3.3.conv1.weight",
+        "network.layer3.3.bn1.weight",
+        "network.layer3.3.bn1.bias",
+        "network.layer3.3.conv2.weight",
+        "network.layer3.3.bn2.weight",
+        "network.layer3.3.bn2.bias",
+        "network.layer3.3.conv3.weight",
+        "network.layer3.3.bn3.weight",
+        "network.layer3.3.bn3.bias",
+        "network.layer3.4.conv1.weight",
+        "network.layer3.4.bn1.weight",
+        "network.layer3.4.bn1.bias",
+        "network.layer3.4.conv2.weight",
+        "network.layer3.4.bn2.weight",
+        "network.layer3.4.bn2.bias",
+        "network.layer3.4.conv3.weight",
+        "network.layer3.4.bn3.weight",
+        "network.layer3.4.bn3.bias",
+        "network.layer3.5.conv1.weight",
+        "network.layer3.5.bn1.weight",
+        "network.layer3.5.bn1.bias",
+        "network.layer3.5.conv2.weight",
+        "network.layer3.5.bn2.weight",
+        "network.layer3.5.bn2.bias",
+        "network.layer3.5.conv3.weight",
+        "network.layer3.5.bn3.weight",
+        "network.layer3.5.bn3.bias",
+        "network.layer4.0.conv1.weight",
+        "network.layer4.0.bn1.weight",
+        "network.layer4.0.bn1.bias",
+        "network.layer4.0.conv2.weight",
+        "network.layer4.0.bn2.weight",
+        "network.layer4.0.bn2.bias",
+        "network.layer4.0.conv3.weight",
+        "network.layer4.0.bn3.weight",
+        "network.layer4.0.bn3.bias",
+        "network.layer4.0.downsample.0.weight",
+        "network.layer4.0.downsample.1.weight",
+        "network.layer4.0.downsample.1.bias",
+        "network.layer4.1.conv1.weight",
+        "network.layer4.1.bn1.weight",
+        "network.layer4.1.bn1.bias",
+        "network.layer4.1.conv2.weight",
+        "network.layer4.1.bn2.weight",
+        "network.layer4.1.bn2.bias",
+        "network.layer4.1.conv3.weight",
+        "network.layer4.1.bn3.weight",
+        "network.layer4.1.bn3.bias",
+        "network.layer4.2.conv1.weight",
+        "network.layer4.2.bn1.weight",
+        "network.layer4.2.bn1.bias",
+        "network.layer4.2.conv2.weight",
+        "network.layer4.2.bn2.weight",
+        "network.layer4.2.bn2.bias",
+        "network.layer4.2.conv3.weight",
+        "network.layer4.2.bn3.weight",
+        "network.layer4.2.bn3.bias",
+        "network.fc.1.weight",
+        "network.fc.1.bias"
+      ],
+      "output": [
+        [
+          -0.01883275806903839
+        ]
+      ]
+    },
+    "efficientnet_b0": {
+      "parameter_names": [
+        "network.features.0.0.weight",
+        "network.features.0.1.weight",
+        "network.features.0.1.bias",
+        "network.features.1.0.block.0.0.weight",
+        "network.features.1.0.block.0.1.weight",
+        "network.features.1.0.block.0.1.bias",
+        "network.features.1.0.block.1.fc1.weight",
+        "network.features.1.0.block.1.fc1.bias",
+        "network.features.1.0.block.1.fc2.weight",
+        "network.features.1.0.block.1.fc2.bias",
+        "network.features.1.0.block.2.0.weight",
+        "network.features.1.0.block.2.1.weight",
+        "network.features.1.0.block.2.1.bias",
+        "network.features.2.0.block.0.0.weight",
+        "network.features.2.0.block.0.1.weight",
+        "network.features.2.0.block.0.1.bias",
+        "network.features.2.0.block.1.0.weight",
+        "network.features.2.0.block.1.1.weight",
+        "network.features.2.0.block.1.1.bias",
+        "network.features.2.0.block.2.fc1.weight",
+        "network.features.2.0.block.2.fc1.bias",
+        "network.features.2.0.block.2.fc2.weight",
+        "network.features.2.0.block.2.fc2.bias",
+        "network.features.2.0.block.3.0.weight",
+        "network.features.2.0.block.3.1.weight",
+        "network.features.2.0.block.3.1.bias",
+        "network.features.2.1.block.0.0.weight",
+        "network.features.2.1.block.0.1.weight",
+        "network.features.2.1.block.0.1.bias",
+        "network.features.2.1.block.1.0.weight",
+        "network.features.2.1.block.1.1.weight",
+        "network.features.2.1.block.1.1.bias",
+        "network.features.2.1.block.2.fc1.weight",
+        "network.features.2.1.block.2.fc1.bias",
+        "network.features.2.1.block.2.fc2.weight",
+        "network.features.2.1.block.2.fc2.bias",
+        "network.features.2.1.block.3.0.weight",
+        "network.features.2.1.block.3.1.weight",
+        "network.features.2.1.block.3.1.bias",
+        "network.features.3.0.block.0.0.weight",
+        "network.features.3.0.block.0.1.weight",
+        "network.features.3.0.block.0.1.bias",
+        "network.features.3.0.block.1.0.weight",
+        "network.features.3.0.block.1.1.weight",
+        "network.features.3.0.block.1.1.bias",
+        "network.features.3.0.block.2.fc1.weight",
+        "network.features.3.0.block.2.fc1.bias",
+        "network.features.3.0.block.2.fc2.weight",
+        "network.features.3.0.block.2.fc2.bias",
+        "network.features.3.0.block.3.0.weight",
+        "network.features.3.0.block.3.1.weight",
+        "network.features.3.0.block.3.1.bias",
+        "network.features.3.1.block.0.0.weight",
+        "network.features.3.1.block.0.1.weight",
+        "network.features.3.1.block.0.1.bias",
+        "network.features.3.1.block.1.0.weight",
+        "network.features.3.1.block.1.1.weight",
+        "network.features.3.1.block.1.1.bias",
+        "network.features.3.1.block.2.fc1.weight",
+        "network.features.3.1.block.2.fc1.bias",
+        "network.features.3.1.block.2.fc2.weight",
+        "network.features.3.1.block.2.fc2.bias",
+        "network.features.3.1.block.3.0.weight",
+        "network.features.3.1.block.3.1.weight",
+        "network.features.3.1.block.3.1.bias",
+        "network.features.4.0.block.0.0.weight",
+        "network.features.4.0.block.0.1.weight",
+        "network.features.4.0.block.0.1.bias",
+        "network.features.4.0.block.1.0.weight",
+        "network.features.4.0.block.1.1.weight",
+        "network.features.4.0.block.1.1.bias",
+        "network.features.4.0.block.2.fc1.weight",
+        "network.features.4.0.block.2.fc1.bias",
+        "network.features.4.0.block.2.fc2.weight",
+        "network.features.4.0.block.2.fc2.bias",
+        "network.features.4.0.block.3.0.weight",
+        "network.features.4.0.block.3.1.weight",
+        "network.features.4.0.block.3.1.bias",
+        "network.features.4.1.block.0.0.weight",
+        "network.features.4.1.block.0.1.weight",
+        "network.features.4.1.block.0.1.bias",
+        "network.features.4.1.block.1.0.weight",
+        "network.features.4.1.block.1.1.weight",
+        "network.features.4.1.block.1.1.bias",
+        "network.features.4.1.block.2.fc1.weight",
+        "network.features.4.1.block.2.fc1.bias",
+        "network.features.4.1.block.2.fc2.weight",
+        "network.features.4.1.block.2.fc2.bias",
+        "network.features.4.1.block.3.0.weight",
+        "network.features.4.1.block.3.1.weight",
+        "network.features.4.1.block.3.1.bias",
+        "network.features.4.2.block.0.0.weight",
+        "network.features.4.2.block.0.1.weight",
+        "network.features.4.2.block.0.1.bias",
+        "network.features.4.2.block.1.0.weight",
+        "network.features.4.2.block.1.1.weight",
+        "network.features.4.2.block.1.1.bias",
+        "network.features.4.2.block.2.fc1.weight",
+        "network.features.4.2.block.2.fc1.bias",
+        "network.features.4.2.block.2.fc2.weight",
+        "network.features.4.2.block.2.fc2.bias",
+        "network.features.4.2.block.3.0.weight",
+        "network.features.4.2.block.3.1.weight",
+        "network.features.4.2.block.3.1.bias",
+        "network.features.5.0.block.0.0.weight",
+        "network.features.5.0.block.0.1.weight",
+        "network.features.5.0.block.0.1.bias",
+        "network.features.5.0.block.1.0.weight",
+        "network.features.5.0.block.1.1.weight",
+        "network.features.5.0.block.1.1.bias",
+        "network.features.5.0.block.2.fc1.weight",
+        "network.features.5.0.block.2.fc1.bias",
+        "network.features.5.0.block.2.fc2.weight",
+        "network.features.5.0.block.2.fc2.bias",
+        "network.features.5.0.block.3.0.weight",
+        "network.features.5.0.block.3.1.weight",
+        "network.features.5.0.block.3.1.bias",
+        "network.features.5.1.block.0.0.weight",
+        "network.features.5.1.block.0.1.weight",
+        "network.features.5.1.block.0.1.bias",
+        "network.features.5.1.block.1.0.weight",
+        "network.features.5.1.block.1.1.weight",
+        "network.features.5.1.block.1.1.bias",
+        "network.features.5.1.block.2.fc1.weight",
+        "network.features.5.1.block.2.fc1.bias",
+        "network.features.5.1.block.2.fc2.weight",
+        "network.features.5.1.block.2.fc2.bias",
+        "network.features.5.1.block.3.0.weight",
+        "network.features.5.1.block.3.1.weight",
+        "network.features.5.1.block.3.1.bias",
+        "network.features.5.2.block.0.0.weight",
+        "network.features.5.2.block.0.1.weight",
+        "network.features.5.2.block.0.1.bias",
+        "network.features.5.2.block.1.0.weight",
+        "network.features.5.2.block.1.1.weight",
+        "network.features.5.2.block.1.1.bias",
+        "network.features.5.2.block.2.fc1.weight",
+        "network.features.5.2.block.2.fc1.bias",
+        "network.features.5.2.block.2.fc2.weight",
+        "network.features.5.2.block.2.fc2.bias",
+        "network.features.5.2.block.3.0.weight",
+        "network.features.5.2.block.3.1.weight",
+        "network.features.5.2.block.3.1.bias",
+        "network.features.6.0.block.0.0.weight",
+        "network.features.6.0.block.0.1.weight",
+        "network.features.6.0.block.0.1.bias",
+        "network.features.6.0.block.1.0.weight",
+        "network.features.6.0.block.1.1.weight",
+        "network.features.6.0.block.1.1.bias",
+        "network.features.6.0.block.2.fc1.weight",
+        "network.features.6.0.block.2.fc1.bias",
+        "network.features.6.0.block.2.fc2.weight",
+        "network.features.6.0.block.2.fc2.bias",
+        "network.features.6.0.block.3.0.weight",
+        "network.features.6.0.block.3.1.weight",
+        "network.features.6.0.block.3.1.bias",
+        "network.features.6.1.block.0.0.weight",
+        "network.features.6.1.block.0.1.weight",
+        "network.features.6.1.block.0.1.bias",
+        "network.features.6.1.block.1.0.weight",
+        "network.features.6.1.block.1.1.weight",
+        "network.features.6.1.block.1.1.bias",
+        "network.features.6.1.block.2.fc1.weight",
+        "network.features.6.1.block.2.fc1.bias",
+        "network.features.6.1.block.2.fc2.weight",
+        "network.features.6.1.block.2.fc2.bias",
+        "network.features.6.1.block.3.0.weight",
+        "network.features.6.1.block.3.1.weight",
+        "network.features.6.1.block.3.1.bias",
+        "network.features.6.2.block.0.0.weight",
+        "network.features.6.2.block.0.1.weight",
+        "network.features.6.2.block.0.1.bias",
+        "network.features.6.2.block.1.0.weight",
+        "network.features.6.2.block.1.1.weight",
+        "network.features.6.2.block.1.1.bias",
+        "network.features.6.2.block.2.fc1.weight",
+        "network.features.6.2.block.2.fc1.bias",
+        "network.features.6.2.block.2.fc2.weight",
+        "network.features.6.2.block.2.fc2.bias",
+        "network.features.6.2.block.3.0.weight",
+        "network.features.6.2.block.3.1.weight",
+        "network.features.6.2.block.3.1.bias",
+        "network.features.6.3.block.0.0.weight",
+        "network.features.6.3.block.0.1.weight",
+        "network.features.6.3.block.0.1.bias",
+        "network.features.6.3.block.1.0.weight",
+        "network.features.6.3.block.1.1.weight",
+        "network.features.6.3.block.1.1.bias",
+        "network.features.6.3.block.2.fc1.weight",
+        "network.features.6.3.block.2.fc1.bias",
+        "network.features.6.3.block.2.fc2.weight",
+        "network.features.6.3.block.2.fc2.bias",
+        "network.features.6.3.block.3.0.weight",
+        "network.features.6.3.block.3.1.weight",
+        "network.features.6.3.block.3.1.bias",
+        "network.features.7.0.block.0.0.weight",
+        "network.features.7.0.block.0.1.weight",
+        "network.features.7.0.block.0.1.bias",
+        "network.features.7.0.block.1.0.weight",
+        "network.features.7.0.block.1.1.weight",
+        "network.features.7.0.block.1.1.bias",
+        "network.features.7.0.block.2.fc1.weight",
+        "network.features.7.0.block.2.fc1.bias",
+        "network.features.7.0.block.2.fc2.weight",
+        "network.features.7.0.block.2.fc2.bias",
+        "network.features.7.0.block.3.0.weight",
+        "network.features.7.0.block.3.1.weight",
+        "network.features.7.0.block.3.1.bias",
+        "network.features.8.0.weight",
+        "network.features.8.1.weight",
+        "network.features.8.1.bias",
+        "network.classifier.1.weight",
+        "network.classifier.1.bias"
+      ],
+      "output": [
+        [
+          -0.025487083941698074
+        ]
+      ]
+    }
+  },
+  "definitions": [
+    {
+      "module": "config",
+      "name": "Config",
+      "sha256": "9631c21e3d3761087bdecd8889a1aedc0aa1a8deef383724fdb8f82c025d347c"
+    },
+    {
+      "module": "config",
+      "name": "selection_label",
+      "sha256": "05390862e9d90ae7ccdbc457104a25a735e04c148963999994f765be7637e842"
+    },
+    {
+      "module": "config",
+      "name": "checkpoint_score",
+      "sha256": "343e4a052f075a10adc166299f4fbe049fbb06e2bd476de4da9bb0d9fed75935"
+    },
+    {
+      "module": "config",
+      "name": "Recipe",
+      "sha256": "c1e43607ac602790452925b958952e50115a15c9e5fbb543855f84444aa46523"
+    },
+    {
+      "module": "config",
+      "name": "configuration",
+      "sha256": "214fb2e734dfe4c1c32c5ae35852012d2359fb4316e32ad4aa3e65299a6f053d"
+    },
+    {
+      "module": "config",
+      "name": "declared_configurations",
+      "sha256": "b8d66e2c60f0ef159be1a9169df198189bf90d32d6bd1d342d51f143435065c7"
+    },
+    {
+      "module": "models",
+      "name": "weight_enum",
+      "sha256": "6289041f36cc9477a826a972aef323e484277728847a3d9232e4dc79b4b3bbed"
+    },
+    {
+      "module": "models",
+      "name": "weights_path",
+      "sha256": "ba025c5c27190e61747e712621be6793d58d572d2d49bee13755330dd3f7dd1f"
+    },
+    {
+      "module": "models",
+      "name": "download_weights",
+      "sha256": "a2a128a039db6aca14945ccf200ad13f8218f44b5d5706d6117997bf0d4e5e11"
+    },
+    {
+      "module": "models",
+      "name": "pretrained_backbone",
+      "sha256": "ae759e3200f5933884d64db5213541f2a1fc175c1f66a76ff6d1f9421aa045dd"
+    },
+    {
+      "module": "models",
+      "name": "build_model",
+      "sha256": "923754ad1f03a262888ec7713d8a5b4a0a2fc5db494fc0aa07349ab9bbc86043"
+    },
+    {
+      "module": "models",
+      "name": "StagedCNN",
+      "sha256": "12187988092d607cd81ea601e141c479d186e0c9e6a6ff2c9eed293b7810c1bc"
+    },
+    {
+      "module": "models",
+      "name": "make_optimizer",
+      "sha256": "6bc6aa4f4bc50202c6007a5d81fc3df873be797599793b296b32c76f83739c03"
+    },
+    {
+      "module": "data",
+      "name": "write_json",
+      "sha256": "927ddc00e9f842faae1ccaf4ee100b91198e878f98c33951997ae77ad03073c9"
+    },
+    {
+      "module": "data",
+      "name": "merge_periods",
+      "sha256": "879150dd68ee48856f74d83596fc5cc57a8e54214608dad3a51f04131fbdb151"
+    },
+    {
+      "module": "data",
+      "name": "choose_indices",
+      "sha256": "d75f14af8b95a8a08bd0ba67abf5b90825b7ef761132decf87b3767a6fc81899"
+    },
+    {
+      "module": "data",
+      "name": "clip_grid",
+      "sha256": "4afa00c849fc0d23bfc9fd6cecc482bc55e87293d4c4ce38788a143dbf403a65"
+    },
+    {
+      "module": "data",
+      "name": "packet_timeline",
+      "sha256": "c0f61423cb24f7551f393872e554b2d8e08117552b56a0931adfdccb72ba52d8"
+    },
+    {
+      "module": "data",
+      "name": "train_dev_rows",
+      "sha256": "9cca0b6bb246944e6bf7c531236f777757f269c51b9dcdc98fb6daf9c2228d4c"
+    },
+    {
+      "module": "data",
+      "name": "rows_hash",
+      "sha256": "034f8059ccb5e2078a3e535156870bc31b7824b94b0eaffbba207b68106eb1c6"
+    },
+    {
+      "module": "data",
+      "name": "validate_index",
+      "sha256": "5256b3684b0d116d5488c08b5c45b9e3d02121a49b99ce72b964134fdeccb684"
+    },
+    {
+      "module": "data",
+      "name": "Index",
+      "sha256": "d889cd37e2891c7ef56d6abe7ddec74b25a6d47325f4dd4fa109ea6a12df27f2"
+    },
+    {
+      "module": "data",
+      "name": "stable_seed",
+      "sha256": "76293175fbf70779081610dd56cf240952b71713de76cd7cc2695181aa8c5150"
+    },
+    {
+      "module": "data",
+      "name": "FrameReader",
+      "sha256": "3783d31c110ab3523a90e21900e371d20f5a3b67d2d4c42b1ee6f6dc02554487"
+    },
+    {
+      "module": "data",
+      "name": "memory_mib",
+      "sha256": "429077950979a6b6079df40254aee870d821b95640008556057c961001a76ec7"
+    },
+    {
+      "module": "data",
+      "name": "LazyDataset",
+      "sha256": "c503f90c2900825a92940ae490f62413036d54fa2568dd6c747823b1925b835d"
+    },
+    {
+      "module": "data",
+      "name": "make_loader",
+      "sha256": "16b9b9d6ff6037069f3886ea3df23698310d3cf83afc0856d92fc981df466186"
+    },
+    {
+      "module": "data",
+      "name": "PoolConfig",
+      "sha256": "e2c8ba8d51c88600bfca128b216d9c7b5c65bceb90f0d28a546918290cd683ab"
+    },
+    {
+      "module": "data",
+      "name": "training_rows",
+      "sha256": "93ba4b0f981c4970f643bd6aa59c2ee21662d5c3f75477c2b3120677e1ae5e02"
+    },
+    {
+      "module": "data",
+      "name": "validate_training_rows",
+      "sha256": "e56a55d788687170d6bb852a71206333694ca50115eeedf89265b0f095154e53"
+    },
+    {
+      "module": "data",
+      "name": "visual_label",
+      "sha256": "019b0d8fa77369fee026e9e3e744f1748ebf3a05da62d219a75e6878b44fe61d"
+    },
+    {
+      "module": "data",
+      "name": "safe_candidates",
+      "sha256": "dd94229d5e9e356d702cbc220a0bb84638740fe95a312ec4434fcbad48f50381"
+    },
+    {
+      "module": "data",
+      "name": "source_interval",
+      "sha256": "4d6e8ecc09d0be14d68e597453fbb8252f06d81a56d6102a046f29d9dbd8a9a5"
+    },
+    {
+      "module": "data",
+      "name": "allocate_quotas",
+      "sha256": "e9d6563f169b3e5c560e6f98e5cbbe762e6e89d6e27faff6edd50a79313df827"
+    },
+    {
+      "module": "data",
+      "name": "spread_indices",
+      "sha256": "f3de5e27bc58caa2b7878343f23383addf8d556815e84a9911f4e038af374536"
+    },
+    {
+      "module": "data",
+      "name": "_source",
+      "sha256": "cd51566e43005e30e0fa18b69ab1f280c62dcbf165707c517da5cc8af2202b42"
+    },
+    {
+      "module": "data",
+      "name": "build_pool",
+      "sha256": "d44a3667213e9c7850fd246b8ac4169213192cbae058dc0040fc6100e65c3d13"
+    },
+    {
+      "module": "data",
+      "name": "FixedPool",
+      "sha256": "9dad78a1a5fa6dbcabc794a8ee89923a40055a457eba8d3b3ee4dac63984c67c"
+    },
+    {
+      "module": "data",
+      "name": "FixedPoolSampler",
+      "sha256": "7295b75c0ac3afc09fa2dc4e2fb8f92a1ec72b97cf9901490baf0711937b34db"
+    },
+    {
+      "module": "data",
+      "name": "diverse_order",
+      "sha256": "45877fe534ed425756ddd95552393d73943c0ad5e6dbab3ece146f7fa46a458f"
+    },
+    {
+      "module": "data",
+      "name": "DevSchedule",
+      "sha256": "48bd1935b63416fb9c417ce9c1fec409ea3f0c34bde7715b50b097ad293cffac"
+    },
+    {
+      "module": "data",
+      "name": "cnn_inputs",
+      "sha256": "82fb87d909b94fa88ed0aefbae63d6a959434d3f69cb260c9eb24cceb2d3e9ce"
+    },
+    {
+      "module": "data",
+      "name": "cnn_records",
+      "sha256": "1dc55eb71d36d38b4426a395e1f1370bf3e6c8c3ec468a1829f780cd03db8957"
+    },
+    {
+      "module": "face_mask",
+      "name": "CropConfig",
+      "sha256": "4089f34cb250363b9bcc5937bb5be966ac7a580a8090936b6c2ed1ab81c37e64"
+    },
+    {
+      "module": "face_mask",
+      "name": "ensure_detector",
+      "sha256": "d5310eaca7c3c3b9474159462da1311b3f621ff09d39bda348821fc5243863b0"
+    },
+    {
+      "module": "face_mask",
+      "name": "crop_rectangle",
+      "sha256": "9bd39ccf5633e40b179427cc5743fe7f2d3ef3eba459634bf5adc7ba43bfacf9"
+    },
+    {
+      "module": "face_mask",
+      "name": "choose_primary",
+      "sha256": "43ca5e92b9d4757e264a0f8651d8374712ee7600443868846d10b2b1d6cc4a8b"
+    },
+    {
+      "module": "face_mask",
+      "name": "YuNet",
+      "sha256": "9ac1748d8440b44532421e1bd20b4032785bd0c9c1bb455f8b229cff8c787faf"
+    },
+    {
+      "module": "face_mask",
+      "name": "frame_key",
+      "sha256": "524aec8ecac66f7a6e79c73afb3c46ef44066ea998abaeec62008cd803b46f41"
+    },
+    {
+      "module": "face_mask",
+      "name": "BoxCache",
+      "sha256": "58a6b99ecdde0062e8fdf111686999c5195fcf9756ecc3808eba5fbdac0ae636"
+    },
+    {
+      "module": "face_mask",
+      "name": "FaceReader",
+      "sha256": "65480b804db500cb9b7561bb2e2233466dfe3dffc944482a2d97654308e6f2ca"
+    },
+    {
+      "module": "face_mask",
+      "name": "FaceDataset",
+      "sha256": "4bc28ef3bed6b11eaa9acaca2cb9375bce11982d038a0b009f14236b4100c7cc"
+    },
+    {
+      "module": "face_mask",
+      "name": "FacePipeline",
+      "sha256": "200b43868d626721623e6da2a7be84cf4ac442e7f9faa0eee837f0faf1bf8ea4"
+    },
+    {
+      "module": "face_mask",
+      "name": "MaskConfig",
+      "sha256": "28a38ade3972c7e53e603942d418d97de4471fac64b4b38360fa828698c6dceb"
+    },
+    {
+      "module": "face_mask",
+      "name": "ensure_landmarker",
+      "sha256": "bfe468eda00025b7852e19cae54b3a9417eb68dada873148d9aaec0ab3585d67"
+    },
+    {
+      "module": "face_mask",
+      "name": "_opencv_distributions",
+      "sha256": "47abb8d7cf20b23a629c4be55f9393642704df3876e5befff84bd44f2ec041b6"
+    },
+    {
+      "module": "face_mask",
+      "name": "ensure_opencv_runtime",
+      "sha256": "eafeab3d3bf1bd8a06fa4a6cc9304056b48c018edb4b074538b623b93001eac8"
+    },
+    {
+      "module": "face_mask",
+      "name": "ensure_landmark_runtime",
+      "sha256": "bbaa919af47d06b7b4ab2aa393fcf6a49cc1cdc84f1a7a56c046c627ff2f23d6"
+    },
+    {
+      "module": "face_mask",
+      "name": "DenseLandmarker",
+      "sha256": "503bb68e47b2183263daa328684b161e939c435acfd90b90329818f879cff498"
+    },
+    {
+      "module": "face_mask",
+      "name": "_rgb",
+      "sha256": "8a8335dbbf2231b6036a0486bfc3a2eb2e423e0d6c98e14dd99c7358d77071dd"
+    },
+    {
+      "module": "face_mask",
+      "name": "_valid_landmarks",
+      "sha256": "39d0d993f62cf753043f79a42377083793a941670321018cb94f37fbf150df8c"
+    },
+    {
+      "module": "face_mask",
+      "name": "select_landmarks",
+      "sha256": "56398edca34f9312c8dc7789977f564b9dc45bf0c870a0189c818536690cc571"
+    },
+    {
+      "module": "face_mask",
+      "name": "face_alpha",
+      "sha256": "65da01a9f08ea60c99ceaaa4ea0b152364b4a19eb7514df8c93698bc1ad95ebb"
+    },
+    {
+      "module": "face_mask",
+      "name": "clipping_diagnostics",
+      "sha256": "f33b49f4a91ab29eb5c571554a042cce2af7ea3a3a2a59c5016cfd4d35448e26"
+    },
+    {
+      "module": "face_mask",
+      "name": "masked_frame",
+      "sha256": "71e3a9ae77b9aa6f7bfe605c6314a80504009f91e413f08e0b3d5a042dafb114"
+    },
+    {
+      "module": "face_mask",
+      "name": "MaskReader",
+      "sha256": "f224a32997b879aa5ffbef1338b57e1252010863a1aca9a7a45e0ee92523f61c"
+    },
+    {
+      "module": "face_mask",
+      "name": "MaskDataset",
+      "sha256": "32267e9863e8868d612f33761528a83bd30f7ff2d33eec7107105750fbf58fba"
+    },
+    {
+      "module": "face_mask",
+      "name": "FaceMaskPipeline",
+      "sha256": "f3e96735257f370a712470b8cce6143bc36b5dee728950e96f05d52fea9392aa"
+    },
+    {
+      "module": "config",
+      "name": "TemporalConfig",
+      "sha256": "3c3b8324fc557093ee08501ddd16b6dd3ffd7048c55c9a26aaafea349f52b8f2"
+    },
+    {
+      "module": "temporal",
+      "name": "clip_rows",
+      "sha256": "8c546c0a970388ff51549b097f746ecce14809adf1b2f3220847793b4bf54723"
+    },
+    {
+      "module": "temporal",
+      "name": "build_clip_manifest",
+      "sha256": "f858c64d7f8c0e2408f6ece47ef4e6f438181c89672d56a75d59af3815d22bd0"
+    },
+    {
+      "module": "temporal",
+      "name": "ClipIndex",
+      "sha256": "0d6b455c7a72a32280890a20b12f300768580e622dc857f0fbf83d0259f67802"
+    },
+    {
+      "module": "temporal",
+      "name": "ClipPool",
+      "sha256": "2215b5badc9a2a3fbe9896a9925b22de44ffeee39fdc7fc4c045309acb0d3bd6"
+    },
+    {
+      "module": "temporal",
+      "name": "ResNetLSTM",
+      "sha256": "55a56405dda2a0557b37cd193c5a3ccde94425cd451ac496a4f22939f8554660"
+    },
+    {
+      "module": "temporal",
+      "name": "trained_resnet",
+      "sha256": "90176accd55fc561a37f4178ff73c5755082ee812c592fe0894419b65fb65d30"
+    },
+    {
+      "module": "temporal",
+      "name": "preflight_temporal",
+      "sha256": "113cb0082735a2444629bd484948f680c6315015286c7739c84a3ad941afa1a8"
+    },
+    {
+      "module": "training",
+      "name": "model_label",
+      "sha256": "7c15c93fefb4a6087bcdc4e69d434f5c7ae5cff34d8fb54e992666e84fe2d0c6"
+    },
+    {
+      "module": "training",
+      "name": "should_log_batch",
+      "sha256": "23b9550e15d2b09f637c8faf4a3c980e5ca18e9571ae5617e5b0b4528ba25979"
+    },
+    {
+      "module": "training",
+      "name": "RunProgress",
+      "sha256": "07431455f7f37b3395899b686a99aaf58061d3f9312d4efe5e88af436c7b8a15"
+    },
+    {
+      "module": "training",
+      "name": "print_epoch_summary",
+      "sha256": "9435ff039f7c7fd1f33abf285cc44ca4f69f47d7ecb7a6f6d0867f015ecef9ed"
+    },
+    {
+      "module": "training",
+      "name": "NumericalInstabilityError",
+      "sha256": "893c3f4d55109c80d2f86afe1fc52e4fd9e338cbb573fc38156d3758886ab34e"
+    },
+    {
+      "module": "training",
+      "name": "GradientGuard",
+      "sha256": "dcc1974d731a095ffc3840dec030465300cbd2bf3c7ca6d8a3a21e3f4e57ccb5"
+    },
+    {
+      "module": "training",
+      "name": "verify_cuda_overflow_skip",
+      "sha256": "6fbfca386bfd9a4f9765d3cce6986018983ec69ebabae57b4c8333482846541b"
+    },
+    {
+      "module": "training",
+      "name": "seed_everything",
+      "sha256": "de4c9471b339503eb247d59409d8229c36628d93fb52027cffd2106dbe979b72"
+    },
+    {
+      "module": "training",
+      "name": "require_cuda",
+      "sha256": "bf7e9051c2dabf2dba7b451b2073afbc7a75a6222f850fe5663a67fcb7cb585d"
+    },
+    {
+      "module": "training",
+      "name": "run_epoch",
+      "sha256": "af65e97677401d982a25e2d6aa6d0cd54213ace2cbf9066373ff75da1af3e9dc"
+    },
+    {
+      "module": "training",
+      "name": "commit_epoch",
+      "sha256": "d16dc605051d749ffa50ad4f5c756c082bcde9fc02babe8a73c1a4e7acbec5dd"
+    },
+    {
+      "module": "training",
+      "name": "train",
+      "sha256": "efcba1e8ed62cea8890efde250c3fb1c69847335f2c80fea2ffb62052db56f03"
+    },
+    {
+      "module": "training",
+      "name": "checkpoint_dev_report",
+      "sha256": "6bfc0a78e966e6ce5b92fb63ac78e1dba50f10fdc209a97170b36b7df5c39e2f"
+    },
+    {
+      "module": "training",
+      "name": "_train",
+      "sha256": "322c31ddfce46f9fc40f749d5fd24697345b5627ff2caa0bcc92467341c94a30"
+    },
+    {
+      "module": "evaluation",
+      "name": "class_loss_metrics",
+      "sha256": "2bb03a9117f93c9eabd9a6e4c6557ff48b721cd9b8d74b06687f22aece1c1572"
+    },
+    {
+      "module": "evaluation",
+      "name": "binary_curves",
+      "sha256": "9b0f234e434f6ef1694125a73a255d1dffcfebe2f119e14e51280e1dd8e56f38"
+    },
+    {
+      "module": "evaluation",
+      "name": "binary_metrics",
+      "sha256": "57ac09b98265396990fabcfc16422894eb5d9e2c59d78a7f83b286b9e985cc85"
+    },
+    {
+      "module": "evaluation",
+      "name": "metrics_with_f2",
+      "sha256": "6ff87c7686322e29b8d6d746dd3ee7ef81e516ed990be7873da7b5004f583959"
+    },
+    {
+      "module": "evaluation",
+      "name": "video_predictions",
+      "sha256": "910366a4fee15159c02b37eda1876fe9acd6718b4ecf8fd37481ebc2225821e1"
+    },
+    {
+      "module": "evaluation",
+      "name": "evaluate_predictions",
+      "sha256": "e477e5d2a70698af28e42ab02e31e19505d3972bc5f0ffcb400b23be83a59e6e"
+    },
+    {
+      "module": "evaluation",
+      "name": "flatten",
+      "sha256": "75ee53c322d4f78f1f26df22399df242c324ca7d3b56d6a25121f0124c8e00e8"
+    },
+    {
+      "module": "evaluation",
+      "name": "write_history_metrics",
+      "sha256": "ab3c4fcf5ea134f1479f55929259ce1b98372cbba0671d7d069d1f91534ce870"
+    },
+    {
+      "module": "evaluation",
+      "name": "plot_history",
+      "sha256": "eb758ff3633fb9c981313914c7f3567a36964f60b7cee99443fcd1f073b9dc22"
+    },
+    {
+      "module": "evaluation",
+      "name": "prediction_artifacts",
+      "sha256": "bab7d23f08dcbc6377f0725c70a85409fc99f2b5b3362b9e43f803c7faebe28a"
+    },
+    {
+      "module": "evaluation",
+      "name": "write_final_numerics",
+      "sha256": "9c0ed3fdf62e9930e64a5f75d2c69e6f807ac249da103316f8f1db778621dda5"
+    },
+    {
+      "module": "evaluation",
+      "name": "dev_threshold_analysis",
+      "sha256": "fc269ca5558598fc189bc7ef3ea74dd1504da49290991417c2c0f8b243d0eb93"
+    },
+    {
+      "module": "evaluation",
+      "name": "family_partition",
+      "sha256": "159e1a3d20e9c11d9f41ad6e213a6f1bc3ae6e7fa4afa5ee96a5fe47e368fa8f"
+    },
+    {
+      "module": "evaluation",
+      "name": "calibrated_f2",
+      "sha256": "3311d3c5338ba052c0467b879fa3750e0db0fa8d9c86db543062ec6ca8cff39b"
+    },
+    {
+      "module": "evaluation",
+      "name": "save_calibration",
+      "sha256": "fddfd8ad6e9991990ad69accd1c90860950c6acd5892ae13b2dedf845a8b4fa7"
+    },
+    {
+      "module": "checkpoints",
+      "name": "saved_config_value",
+      "sha256": "a3da3e8799d3198cccf3061276ef23314a2cb7e0cf56150ac176526e2786750e"
+    },
+    {
+      "module": "checkpoints",
+      "name": "rng_state",
+      "sha256": "062ef2ed38c130cd68732e7d8c8aa34ff8623c0e1cedc3cda1ea0d87a0733207"
+    },
+    {
+      "module": "checkpoints",
+      "name": "restore_rng",
+      "sha256": "ed58a816edd95fe473696f6ca1c33f24b44609ed2e75674985fc3adc66a7a507"
+    },
+    {
+      "module": "checkpoints",
+      "name": "assert_finite_state",
+      "sha256": "daa16777237d14ecf00ea33b3b2544cd2d2744072fbf160beced312a1209e5c8"
+    },
+    {
+      "module": "checkpoints",
+      "name": "load_resume_bundle",
+      "sha256": "e62419089d41e9e6abb7040c224e0e6e030c3f506c6fb077f46e1d850efb835f"
+    },
+    {
+      "module": "checkpoints",
+      "name": "restore_training_state",
+      "sha256": "e6713c1f80ca834cbf66d6aa285f8f075cc7d5b693cf51a46ea2dfb81399b327"
+    },
+    {
+      "module": "checkpoints",
+      "name": "copy_resume_boundary",
+      "sha256": "ac9edd8cd986e3688abe77b5cac4e83a989e5181c4ef44b5c38557f11f14efd3"
+    },
+    {
+      "module": "checkpoints",
+      "name": "digest",
+      "sha256": "65b28056017fa8c471bca3b0d747561fc7e2ced8ae421c4dd1943f2f10f19dbc"
+    },
+    {
+      "module": "checkpoints",
+      "name": "atomic_checkpoint",
+      "sha256": "73cab99884db61af76a0e4a79136b0caed7ca41b0a4d319d1b91e2a1b696a117"
+    },
+    {
+      "module": "checkpoints",
+      "name": "bind_resume_identity",
+      "sha256": "7f7344c2c6696f3a65fae55c471bdcf1f0644fd2e952907ca92d374113603f39"
+    },
+    {
+      "module": "reporting",
+      "name": "SavedRun",
+      "sha256": "afde28fff61dd9ca22f8b32008d8655d4ec3f82a9b32b85b330419eee626cc3c"
+    },
+    {
+      "module": "reporting",
+      "name": "_scalar",
+      "sha256": "2450ccca3d980bed67bce1148e7da81a99aebb85c1343269246c3317fb24ff1d"
+    },
+    {
+      "module": "reporting",
+      "name": "_unflatten",
+      "sha256": "4410eb6c69bb8f32eb7044503d16fab0f1e5136d1c3d3fcf40a2ec0274a0724e"
+    },
+    {
+      "module": "reporting",
+      "name": "load_history",
+      "sha256": "dc645c37c631c134d3345e3716cb98a4f12f6c7bd3c5c603344327533a4d5895"
+    },
+    {
+      "module": "reporting",
+      "name": "_selected_epoch",
+      "sha256": "7e5757fd3daaf03a39a43733b5776566b9a9bf35b362b3e6cc71e3a5ae6c71fe"
+    },
+    {
+      "module": "reporting",
+      "name": "_numeric",
+      "sha256": "a1a1230f75465c0c65886e50919c2aee3f6ed0576960f1729b2f4e7da8442278"
+    },
+    {
+      "module": "reporting",
+      "name": "at_half",
+      "sha256": "ea06689865163d546595b5a5a178c1b426eb41ed283be56da8c1d4b12e4a57e7"
+    },
+    {
+      "module": "reporting",
+      "name": "_best_metrics",
+      "sha256": "8d81a7aaf78b9ab565e8d24b9e4cd434678e65c95107bc34d91ebac7bd8db21b"
+    },
+    {
+      "module": "reporting",
+      "name": "epoch_table",
+      "sha256": "8fcc1dd90491ae372cfbfc8635fc5399573d29c806e9555a23be352e09433f02"
+    },
+    {
+      "module": "reporting",
+      "name": "table_html",
+      "sha256": "b7602166d14514d53fe090a5a0366d4909195cf591331cd488de2f1fc8971948"
+    },
+    {
+      "module": "reporting",
+      "name": "display_completed_run",
+      "sha256": "cfeb53d057bb40307800d337cfad73ef87cf09ac35ba7261993f6a9db3806c98"
+    },
+    {
+      "module": "reporting",
+      "name": "export_epoch_report",
+      "sha256": "541017943e6ee468516b9fbdc834dc3a02aadc925ba86c452fa399cb96753d63"
+    },
+    {
+      "module": "reporting",
+      "name": "export_report",
+      "sha256": "54779c7c600b8d5b7853c010bbdeed31576f3b1cd517e87ef0f289b4ce6e8a51"
+    },
+    {
+      "module": "reporting",
+      "name": "show_run",
+      "sha256": "44545a644701dffc95d8bd5226b5788bc32e62d8252507753bbcecd1dd2e47f9"
+    },
+    {
+      "module": "reporting",
+      "name": "evaluate_dev",
+      "sha256": "ade679f163454e5bb0dd8d1f1f3c470e2664877dfa20760ece63db5e1b6daa95"
+    },
+    {
+      "module": "reporting",
+      "name": "explain_dev",
+      "sha256": "6c0648f11721ca18c99c86b743d748d39a23e81fbc0bff669ed4464d1e9b119b"
+    },
+    {
+      "module": "backup",
+      "name": "create_download_test",
+      "sha256": "1a794e0b474e2a7d2bff5b6898dd10497f6defaf4ee5c4e503b2fa48abf016a9"
+    },
+    {
+      "module": "backup",
+      "name": "confirm_download",
+      "sha256": "d2a4b02593f2ec67f429905be8d95738591a2c13acd3e33fc86ff8fc457e8ab5"
+    },
+    {
+      "module": "backup",
+      "name": "restore_local_zip",
+      "sha256": "bac98b94bc2a4748be3a6dcecbe50d6f0b418219a4e765259409b3950cc0bcb3"
+    },
+    {
+      "module": "backup",
+      "name": "sha256",
+      "sha256": "34d0e9b9638f758d1daa1808e4a6560f0b0955f7986034857d6e51c745f9b929"
+    },
+    {
+      "module": "backup",
+      "name": "_boundary",
+      "sha256": "45518b1d54685bea5392a29fbcc62150fedffc31e50f2afab57c0c2e20cfb785"
+    },
+    {
+      "module": "backup",
+      "name": "backup_run",
+      "sha256": "26b969e36aec726fa1633678337c580870d7a4bec24eadc96aa9d72ad0135c34"
+    },
+    {
+      "module": "backup",
+      "name": "restore_run",
+      "sha256": "042338ec627def32c77d2bf1fc07ba49a2ba98b466a4b6d1bb9805c31efd1134"
+    },
+    {
+      "module": "gradcam",
+      "name": "target_layer",
+      "sha256": "cec2a44cb663ebbf35d69ddc37465c3afe7aafd23080a9d1408e4523a0104124"
+    },
+    {
+      "module": "gradcam",
+      "name": "GradCAM",
+      "sha256": "39ab136fdbe5f9230fe59a6216dc0de9d678dc4c0d9627fb35acdc42a94b3f56"
+    },
+    {
+      "module": "workflow",
+      "name": "new_id",
+      "sha256": "507f4f8c202b871f7c62c35d28ab1ed5e197d23c386f591390e7721f57a05c1f"
+    },
+    {
+      "module": "workflow",
+      "name": "Inputs",
+      "sha256": "511151f322065e42cc2783bff6f9f2027135c57d05dfdd28fd5122d4603c8dda"
+    },
+    {
+      "module": "workflow",
+      "name": "project_id",
+      "sha256": "4d4fca771c9d594fc8f266941ff84c8b408f1296518f637baf2e635e92232c9e"
+    },
+    {
+      "module": "workflow",
+      "name": "guard_dev",
+      "sha256": "c1b84ba952f28b8becf5e9ba8e7ff14b26c8af5b123166fd1bbc79d830b569a3"
+    },
+    {
+      "module": "workflow",
+      "name": "validate_inputs",
+      "sha256": "151debe596664166fae1d6f647b18c11989a07f589116e37d2b8b70af6b27665",
+      "artifact_adaptation": {
+        "sha256": "2c0bd24efe82e34386a457ab851a06c35e616e72d0d1b6c951bc1110d96bd960",
+        "reason": "Explicit REUSE/BUILD artifact setup and full logical SQLite verification; original model/training/sampling/DEV bodies unchanged. Covered by test_candidates.py."
+      }
+    },
+    {
+      "module": "workflow",
+      "name": "prepare_manifests",
+      "sha256": "a3ca39d1677cdb63217597206456f0b6bd95b24538dc517870656505a520212f",
+      "artifact_adaptation": {
+        "sha256": "041cb469efec4fe56b094a75ac07c30b43faccfd7e3a8f0285d3bddd9be23e94",
+        "reason": "Explicit REUSE/BUILD artifact setup and full logical SQLite verification; original model/training/sampling/DEV bodies unchanged. Covered by test_candidates.py."
+      }
+    },
+    {
+      "module": "workflow",
+      "name": "mask_pipeline",
+      "sha256": "aca5287789a09cbcdc24f3900aaae77834bc1f2a0b244ee466f2bf32f7df2e17"
+    },
+    {
+      "module": "workflow",
+      "name": "setup_assets",
+      "sha256": "0369b76d8f4b409ce92510a331b8e8597841b8d56c104d606511217ceeb1c501"
+    },
+    {
+      "module": "workflow",
+      "name": "checkpoint_identity",
+      "sha256": "0f7542ed86c9a14dddc1e3c4980f13bf27839a587487d84976cbe68b268934ed"
+    },
+    {
+      "module": "workflow",
+      "name": "new_encoder",
+      "sha256": "0421a94e34883f37b1b2035d88a10e4ca9c47989afd1c85d39103114c51281dc"
+    },
+    {
+      "module": "workflow",
+      "name": "discover_runs",
+      "sha256": "5f9ef2a4efa36c0eaf8d4fd9093c58b7487935705a1837b2d816e96f8ff269f0"
+    },
+    {
+      "module": "workflow",
+      "name": "choose_runs",
+      "sha256": "cc0f428dd7b9ff83d6005633240bc560a0a5bad55b20f505dae62ed868914bfd"
+    },
+    {
+      "module": "workflow",
+      "name": "preflight",
+      "sha256": "69fb0375e7d233a1d2465ff7075470e0971b78ffefe61c5349ab0ec36aae660a"
+    },
+    {
+      "module": "workflow",
+      "name": "resume_candidate",
+      "sha256": "87e2194d47f05636c0863297fe5c8ffe09d3a351ec666bf86467b267da7047ac"
+    },
+    {
+      "module": "workflow",
+      "name": "execute_training",
+      "sha256": "4517a83e88835fe75a346c52788d1278770c1926560ee4e6b2aff1692103a989"
+    },
+    {
+      "module": "data",
+      "name": "build_index",
+      "sha256": "20c41c068a86f185d8ad46ce9698be8013683c02eaabf02b7ed987ba01ce3938"
+    }
+  ],
+  "sampling": [
+    [
+      18,
+      15,
+      11,
+      22,
+      23,
+      6,
+      10,
+      7
+    ],
+    [
+      21,
+      4,
+      2,
+      19,
+      5,
+      8,
+      14,
+      3
+    ],
+    [
+      9,
+      20,
+      1,
+      12,
+      17,
+      0,
+      13,
+      16
+    ],
+    [
+      15,
+      0,
+      5,
+      14,
+      17,
+      8,
+      18,
+      23
+    ],
+    [
+      12,
+      7,
+      4,
+      3,
+      20,
+      9,
+      13,
+      2
+    ]
+  ]
+}
